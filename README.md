@@ -55,9 +55,36 @@ In this file, it talk about all of the python basic.
 
 
 
-##### 
+## 02 Object Oriented Programming(OOP)
 
+In this file, it talk about all of the python OOP.
 
+#### 2.1 OOP basic grammer
+
+* Create first class 🐱 
+* when create the second 😺 , their addresses are different
+* parameter "self" inside function points to the Class itself
+* use parameters to specify the attribute of an object
+* \_\_init\_\_, When the object made, init autoly run
+* \_\_del\_\_, When object go, del autoly run
+* \_\_str\_\_, return specified output of print(Object)
+
+#### 2.2 Encapsulation (One feature of OOP)
+
+* Two objects do not affect each other
+* The attribute of an object can be another object
+* Python do not have real private, we can add "object.\_class\_\_attr" or "object.\_class\_\_func()" to get the private func and attr **NOT RECOMMEND**
+
+#### 2.3 Inheritance (One feature of OOP)
+
+* Child  class and Grandchild class can inherit all function from Father class
+* When the function of father is not good enough , overide that
+* Use super() to get the function of father class
+* Use father.func(self) **Python 2.x Not recommend**
+* Child can not get the private attr and private func of its father
+* Child can get the private attr and private func by the public func of its father
+
+ 
 
 
 

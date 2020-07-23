@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is the repository I want to memorize the code and difficult I face  when I learn python.
+This is the repository I want to write down the code and difficult I face  when I learn python.
 
 ## 01 Procedure Oriented
 

@@ -6,15 +6,15 @@ This is the repository I want to memorize the code and difficult I face  when I 
 
 ## 01 Procedure Oriented
 
-​	In this file, it talk about all of the python basic grammer
+&ensp In this file, it talk about all of the python basic grammer
 
 #### 1.1 Basic
 
-​	Basic grammer for python.
+&ensp Basic grammer for python.
 
 #### 1.2 Branch
 
-​	if, elif and else are the keyword for branch.
+&ensp if, elif and else are the keyword for branch.
 
 #### 1.3 Loop
 
@@ -34,15 +34,19 @@ This is the repository I want to memorize the code and difficult I face  when I 
 
 #### 1.7 Dictionary
 
-​	Dictionary is one data type of python. It has key and value. Key and value are in pair. Dictionary is inordered.
+
+
+Dictionary is one data type of python. It has key and value. Key and value are in pair. Dictionary is inordered.
+
+
 
 #### 1.8 String
 
-​	String is one data type of python. There are many functions for String.
+String is one data type of python. There are many functions for String.
 
 #### 1.9 For
 
-​	For each is a typical type of for loop, the code inside the each will occur if the for loop finish without break.
+For each is a typical type of for loop, the code inside the each will occur if the for loop finish without break.
 
 #### 1.10 [Project] Name Card System
 

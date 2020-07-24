@@ -170,9 +170,9 @@ In this file, it talk about all of the python OOP.
 | 05   | chdir      | Change dir to target     | `os.chdir(target folder name)` |
 | 06   | path.isdir | Jusitify if it is folder | `os.path.isdir(folder name)`   |
 
+<br>
 
-
-
+<br>
 
 # 01 Procedure Oriented
 

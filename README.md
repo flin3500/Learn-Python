@@ -2,11 +2,7 @@ Python Learning
 =================
 
    * [Introduction](#introduction)
-
-        
-
    * [02 Object Oriented Programming(OOP)</br>](#02-object-oriented-programmingoop)
-           
             * [2.1 OOP basic grammer](#21-oop-basic-grammer)</br>
             * [2.2 Encapsulation (One feature of OOP)</br>](#22-encapsulation-one-feature-of-oop)
             * [2.3 Inheritance (One feature of OOP)</br>](#23-inheritance-one-feature-of-oop)
@@ -17,11 +13,7 @@ Python Learning
             * [2.8 Singleton Pattern (One of design Pattern)</br>](#28-singleton-pattern-one-of-design-pattern)
             * [2.9 Errors and Exception</br>](#29-errors-and-exception)
             * [2.10 Module</br>](#210-module)
-           
-           
-           
    * [01 Procedure Oriented](#01-procedure-oriented)</br>
-           
             * [1.1 Basic</br>](#11-basic)
             * [1.2 Branch</br>](#12-branch)
             * [1.3 Loop</br>](#13-loop)

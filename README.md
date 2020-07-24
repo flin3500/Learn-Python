@@ -132,8 +132,6 @@ In this file, it talk about all of the python OOP.
 * Make sure every file is able to import
 * \__name__ == "\_\_main\_\_" is used to test. when others inport, the code inside main will not execute **Very Recommend**  *(LN_08, LN_09)*
 
-
-
 * How to create package: two ways *(LN_10_package)*
 * We must specify the module we want to let outside import inthe init.py file  *(LN_10_package, LN_10_import_package)*
 * Use setup if we want to share our module to other developers

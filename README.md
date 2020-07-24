@@ -33,7 +33,7 @@ This is the repository I want to write down the code and difficult I face  when 
 
 In this file, it talk about all of the python OOP.
 
-#### 2.1 OOP basic grammer
+### 2.1 OOP basic grammer
 
 * Create first class 🐱  *(LN_01)*
 * when create the second 😺 , their addresses are different  *(LN_02)*
@@ -45,7 +45,7 @@ In this file, it talk about all of the python OOP.
 
 
 
-#### 2.2 Encapsulation (One feature of OOP)
+### 2.2 Encapsulation (One feature of OOP)
 
 * Two objects do not affect each other  *(LN_01, LN_02)*
 * The attribute of an object can be another object  *(LN_03)*
@@ -53,7 +53,7 @@ In this file, it talk about all of the python OOP.
 
 
 
-#### 2.3 Inheritance (One feature of OOP)
+### 2.3 Inheritance (One feature of OOP)
 
 * Child  class and Grandchild class can inherit all method from Father class  *(LN_01)*
 * When the method of father is not good enough , overide that  *(LN_01)*
@@ -64,7 +64,7 @@ In this file, it talk about all of the python OOP.
 
 
 
-#### 2.4 Multiple inheritance
+### 2.4 Multiple inheritance
 
 * Child class can inherit all Methods and all attrs of its all fathers  *(LN_01)*
 * If fathers have the same method, avoid inheritance  *(LN_01)*
@@ -73,14 +73,14 @@ In this file, it talk about all of the python OOP.
 
 
 
-#### 2.5 Polymorphism (One feature of OOP)
+### 2.5 Polymorphism (One feature of OOP)
 
 * Different child class call the same method of father class, the outcome is differernt. *(LN_01)*
 * **This is based on inherit and overide the father class**
 
 
 
-#### 2.6 Class Attributes
+### 2.6 Class Attributes
 
 * An **instance** is an object in memory, made by class
 * Every **instance** has its own memory and have different instance attribute
@@ -92,7 +92,7 @@ In this file, it talk about all of the python OOP.
 
 
 
-#### 2.7 Class Methods
+### 2.7 Class Methods
 
 * There are three method, instance method, class method and static method
 * Class method example, need @classmethod *(LN_01)*
@@ -101,7 +101,7 @@ In this file, it talk about all of the python OOP.
 
 
 
-#### 2.8 Singleton Pattern (One of design Pattern)
+### 2.8 Singleton Pattern (One of design Pattern)
 
 * \_\_new__ method is used to allocate address for object, and need to return object to \_\_init__  *(LN_01)*
 * Can change \__new__ method in order to satisfy Singleton Pattern  *(LN_02)*
@@ -109,7 +109,7 @@ In this file, it talk about all of the python OOP.
 
 
 
-#### 2.9 Errors and Exception
+### 2.9 Errors and Exception
 
 * Use try except to get the error  *(LN_01)*
 * Use different except to get different error  *(LN_02)*
@@ -120,7 +120,7 @@ In this file, it talk about all of the python OOP.
 
 
 
-#### 2.10 Module
+### 2.10 Module
 
 * Review import module *(LN_01, LN_02, LN_03)*
 * can use "import xxxx as xx" to give the module a alias *(LN_01)*
@@ -140,46 +140,46 @@ In this file, it talk about all of the python OOP.
 
 In this file, it talk about all of the python basic.
 
-#### 1.1 Basic
+### 1.1 Basic
 
 * Basic grammer for python.
 
-#### 1.2 Branch
+### 1.2 Branch
 
 * if, elif and else are the keyword for branch.
 
-#### 1.3 Loop
+### 1.3 Loop
 
 * While loop is a type of loop which can run typical code for several time.
 
-#### 1.4 Function
+### 1.4 Function
 
 * Def is the key word to define a function in python.
 
-#### 1.5 Module
+### 1.5 Module
 
 * Every .py file is a module and we can use import to use the function of other module.
 
-#### 1.6 List and Tuple
+### 1.6 List and Tuple
 
 * LIst and Tuple are two data type of python
 * They are ordered and list can be change and tuple can not
 * There are many function for list and only two for tuple which is index and count.
 
-#### 1.7 Dictionary
+### 1.7 Dictionary
 
 * Dictionary is one data type of python
 * It has key and value. Key and value are in pair. Dictionary is inordered.
 
-#### 1.8 String
+### 1.8 String
 
 * String is one data type of python. There are many functions for String.
 
-#### 1.9 For
+### 1.9 For
 
 * For each is a typical type of for loop, the code inside the each will occur if the for loop finish without break.
 
-#### 1.10 [Project] Name Card System
+### 1.10 [Project] Name Card System
 
 * This is a Name Card System which can add, show and search the cards.
 

@@ -14,7 +14,7 @@ Python Learning
                 * [2.8 Singleton Pattern (One of design Pattern)</br>](#28-singleton-pattern-one-of-design-pattern)
                 * [2.9 Errors and Exception</br>](#29-errors-and-exception)
                 * [2.10 Module</br>](#210-module)
-      * [01 Procedure Oriented](#01-procedure-oriented)
+      * [01 Procedure Oriented](#01-procedure-oriented)</br>
             * [1.1 Basic](#11-basic)</br>
                 * [1.2 Branch</br>](#12-branch)
                 * [1.3 Loop</br>](#13-loop)
@@ -137,14 +137,6 @@ In this file, it talk about all of the python OOP.
 * How to create package: two ways *(LN_10_package)*
 * We must specify the module we want to let outside import inthe init.py file  *(LN_10_package, LN_10_import_package)*
 * Use setup if we want to share our module to other developers
-
-
-
-
-
-
-
-
 
 ## 01 Procedure Oriented
 

@@ -4,6 +4,124 @@
 
 This is the repository I want to write down the code and difficult I face  when I learn python.
 
+[toc]
+
+## 02 Object Oriented Programming(OOP)
+
+In this file, it talk about all of the python OOP.
+
+#### 2.1 OOP basic grammer
+
+* Create first class 🐱  *(LN_01)*
+* when create the second 😺 , their addresses are different  *(LN_02)*
+* parameter "self" inside method points to the Class itself
+* use parameters to specify the attribute of an object  *(LN_04)*
+* \_\_init\_\_, When the object made, init autoly run  *(LN_03)*
+* \_\_del\_\_, When object go, del autoly run  *(LN_05)*
+* \_\_str\_\_, return specified output of print(Object)  *(LN_06)*
+
+
+
+#### 2.2 Encapsulation (One feature of OOP)
+
+* Two objects do not affect each other  *(LN_01, LN_02)*
+* The attribute of an object can be another object  *(LN_03)*
+* Python do not have real private, we can add "object.\_class\_\_attr" or "object.\_class\_\_method()" to get the private method and attr **NOT RECOMMEND**  *(LN_04)*
+
+
+
+#### 2.3 Inheritance (One feature of OOP)
+
+* Child  class and Grandchild class can inherit all method from Father class  *(LN_01)*
+* When the method of father is not good enough , overide that  *(LN_01)*
+* Use super() to get the method of father class  *(LN_01)*
+* Use father.method(self) **Python 2.x Not recommend**  *(LN_01)*
+* Child can not get the private attr and private method of its father  *(LN_02)*
+* Child can get the private attr and private method by the public method of its father  *(LN_03)*
+
+
+
+#### 2.4 Multiple inheritance
+
+* Child class can inherit all Methods and all attrs of its all fathers  *(LN_01)*
+* If fathers have the same method, avoid inheritance  *(LN_01)*
+* **Object.\_\_mro\_\_** can show method resolution order in python  *(LN_02)*
+* **Python 3.x inherit from object class automatically**, whereas Python 2.x not and need to specify object as father class. Recommend specify object as father class in order to adapt both 2.x and 3.x  *(LN_02)*
+
+
+
+#### 2.5 Polymorphism (One feature of OOP)
+
+* Different child class call the same method of father class, the outcome is differernt. *(LN_01)*
+* **This is based on inherit and overide the father class**
+
+
+
+#### 2.6 Class Attributes
+
+* An **instance** is an object in memory, made by class
+* Every **instance** has its own memory and have different instance attribute
+* Every **Class** only be created once in memory 
+* Every **Method inside class** only be create once in memory. The objects create by same class share memory of the method. 
+* **Class is also an object, so it also has class attributes and class method** *(LN_01)*
+* Can use object to get father class attribute from **grandchild -> father -> grandparent -> ... -> Object         Not recommend**  *(LN_02)*
+* If want to use child.dadattr = to set an attr, this only add a new attr to the grandchild, can not change the attr of  its dad. So not recommend for the previous one  *(LN_03)*
+
+
+
+#### 2.7 Class Methods
+
+* There are three method, instance method, class method and static method
+* Class method example, need @classmethod *(LN_01)*
+* Static method example, need @staticmethid, do not need instance just class.staticmethod()  *(LN_02)*
+* Combine class attributes and class method *(LN_03)*
+
+
+
+#### 2.8 Singleton Pattern (One of design Pattern)
+
+* \_\_new__ method is used to allocate address for object, and need to return object to \_\_init__  *(LN_01)*
+* Can change \__new__ method in order to satisfy Singleton Pattern  *(LN_02)*
+* Can change \__init__ method in order to make init only execute once  *(LN_03)*
+
+
+
+#### 2.9 Errors and Exception
+
+* Use try except to get the error  *(LN_01)*
+* Use different except to get different error  *(LN_02)*
+* Use "except Exception as result"  to get unknown error  *(LN_03)*
+* The code inside else will occur when no error, the code inside finally will always occur  *(LN_04)*
+* Exception pass can let us only try except in the main, to make us easy  *(LN_05)*
+* Can use Exception class to make a user-define exception *(LN_06)*
+
+
+
+#### 2.10 Module
+
+* Review import module *(LN_01, LN_02, LN_03)*
+* can use "import xxxx as xx" to give the module a alias *(LN_01)*
+* can use "from xxxx inport xx" to specify the Function or class which want to import   *(LN_04)*
+* If import same function from different module, the last one will be valid. Or use as to avoid this conflict  *(LN_05)*
+* can use "from xxxx inport \*" to import all from module **Not recommend**  *(LN_06)*
+* The order import module **local folder -> system folder**, use random\__file__ to see the absolute path of that module  *(LN_07)*
+* Make sure every file is able to import
+* \__name__ == "\_\_main\_\_" is used to test. when others inport, the code inside main will not execute **Very Recommend**  *(LN_08, LN_09)*
+
+
+
+* How to create package: two ways *(LN_10_package)*
+* We must specify the module we want to let outside import inthe init.py file  *(LN_10_package, LN_10_import_package)*
+* Use setup if we want to share our module to other developers
+
+
+
+
+
+
+
+
+
 ## 01 Procedure Oriented
 
 In this file, it talk about all of the python basic.
@@ -50,99 +168,6 @@ In this file, it talk about all of the python basic.
 #### 1.10 [Project] Name Card System
 
 * This is a Name Card System which can add, show and search the cards.
-
-
-
-
-
-## 02 Object Oriented Programming(OOP)
-
-In this file, it talk about all of the python OOP.
-
-#### 2.1 OOP basic grammer
-
-* Create first class 🐱  *(LN_01)*
-* when create the second 😺 , their addresses are different  *(LN_02)*
-* parameter "self" inside method points to the Class itself
-* use parameters to specify the attribute of an object  *(LN_04)*
-* \_\_init\_\_, When the object made, init autoly run  *(LN_03)*
-* \_\_del\_\_, When object go, del autoly run  *(LN_05)*
-* \_\_str\_\_, return specified output of print(Object)  *(LN_06)*
-
-#### 2.2 Encapsulation (One feature of OOP)
-
-* Two objects do not affect each other  *(LN_01, LN_02)*
-* The attribute of an object can be another object  *(LN_03)*
-* Python do not have real private, we can add "object.\_class\_\_attr" or "object.\_class\_\_method()" to get the private method and attr **NOT RECOMMEND**  *(LN_04)*
-
-#### 2.3 Inheritance (One feature of OOP)
-
-* Child  class and Grandchild class can inherit all method from Father class  *(LN_01)*
-* When the method of father is not good enough , overide that  *(LN_01)*
-* Use super() to get the method of father class  *(LN_01)*
-* Use father.method(self) **Python 2.x Not recommend**  *(LN_01)*
-* Child can not get the private attr and private method of its father  *(LN_02)*
-* Child can get the private attr and private method by the public method of its father  *(LN_03)*
-
-#### 2.4 Multiple inheritance
-
-* Child class can inherit all Methods and all attrs of its all fathers  *(LN_01)*
-* If fathers have the same method, avoid inheritance  *(LN_01)*
-* **Object.\_\_mro\_\_** can show method resolution order in python  *(LN_02)*
-* **Python 3.x inherit from object class automatically**, whereas Python 2.x not and need to specify object as father class. Recommend specify object as father class in order to adapt both 2.x and 3.x  *(LN_02)*
-
-#### 2.5 Polymorphism (One feature of OOP)
-
-* Different child class call the same method of father class, the outcome is differernt. *(LN_01)*
-* **This is based on inherit and overide the father class**
-
-#### 2.6 Class Attributes
-
-* An **instance** is an object in memory, made by class
-* Every **instance** has its own memory and have different instance attribute
-* Every **Class** only be created once in memory 
-* Every **Method inside class** only be create once in memory. The objects create by same class share memory of the method. 
-* **Class is also an object, so it also has class attributes and class method** *(LN_01)*
-* Can use object to get father class attribute from **grandchild -> father -> grandparent -> ... -> Object         Not recommend**  *(LN_02)*
-* If want to use child.dadattr = to set an attr, this only add a new attr to the grandchild, can not change the attr of  its dad. So not recommend for the previous one  *(LN_03)*
-
-#### 2.7 Class Methods
-
-* There are three method, instance method, class method and static method
-* Class method example, need @classmethod *(LN_01)*
-* Static method example, need @staticmethid, do not need instance just class.staticmethod()  *(LN_02)*
-* Combine class attributes and class method *(LN_03)*
-
-#### 2.8 Singleton Pattern (One of design Pattern)
-
-* \_\_new__ method is used to allocate address for object, and need to return object to \_\_init__  *(LN_01)*
-* Can change \__new__ method in order to satisfy Singleton Pattern  *(LN_02)*
-* Can change \__init__ method in order to make init only execute once  *(LN_03)*
-
-#### 2.9 Errors and Exception
-
-* Use try except to get the error  *(LN_01)*
-* Use different except to get different error  *(LN_02)*
-* Use "except Exception as result"  to get unknown error  *(LN_03)*
-* The code inside else will occur when no error, the code inside finally will always occur  *(LN_04)*
-* Exception pass can let us only try except in the main, to make us easy  *(LN_05)*
-* Can use Exception class to make a user-define exception *(LN_06)*
-
-#### 2.10 Module
-
-* Review import module *(LN_01, LN_02, LN_03)*
-* can use "import xxxx as xx" to give the module a alias *(LN_01)*
-* can use "from xxxx inport xx" to specify the Function or class which want to import   *(LN_04)*
-* If import same function from different module, the last one will be valid. Or use as to avoid this conflict  *(LN_05)*
-* can use "from xxxx inport \*" to import all from module **Not recommend**  *(LN_06)*
-* The order import module **local folder -> system folder**, use random\__file__ to see the absolute path of that module  *(LN_07)*
-* Make sure every file is able to import
-* \__name__ == "\_\_main\_\_" is used to test. when others inport, the code inside main will not execute **Very Recommend**  *(LN_08, LN_09)*
-
-
-
-* How to create package: two ways *(LN_10)*
-* 
 
 
 

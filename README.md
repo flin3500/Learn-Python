@@ -27,7 +27,7 @@ Python Learning
 
 # Introduction
 
-This is the repository I want to write down the code and difficult I face  when I learn python.
+This is the repository contains the code and difficulties I face when I learn python.
 
 # 02 Object Oriented Programming(OOP)
 

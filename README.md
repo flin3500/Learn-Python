@@ -136,6 +136,8 @@ In this file, it talk about all of the python OOP.
 * We must specify the module we want to let outside import inthe init.py file  *(LN_10_package, LN_10_import_package)*
 * Use setup if we want to share our module to other developers
 
+
+
 ## 01 Procedure Oriented
 
 In this file, it talk about all of the python basic.

@@ -134,7 +134,34 @@ In this file, it talk about all of the python OOP.
 * We must specify the module we want to let outside import inthe init.py file  *(LN_10_package, LN_10_import_package)*
 * Use setup if we want to share our module to other developers
 
+### 2.11 Read and write
 
+* Read file *(LN_01)*
+
+* When call read(), the read pointer will go to the end of file   *(LN_02)*
+
+* | Para | Description                                                  |
+  | :--: | :----------------------------------------------------------- |
+  |  r   | Read Only, read pointer will be at beginning, this is the **default** way. If the file not exist, throw exception |
+  |  w   | Write Only. If file exists, overwrite that. If file not exists, make a new one. |
+  |  a   | Append Only. If the file exists, the pointer will at the end of the file. If file not exists, make a new one. |
+  |  r+  | Read and write, read pointer will be at beginning. If the file not exist, throw exception |
+  |  w+  | Read and write. If file exists, overwrite that. If file not exists, make a new one. |
+  |  a+  | Read and write. If the file exists, the pointer will at the end of the file. If file not exists, make a new one. |
+
+  When call readline(), only the first line will be read.  *(LN_05)*
+
+* Copy small: Read a file and write it to a new file.  *(LN_06)*
+
+* Copy large: Readline a file and write it to a new file.  *(LN_07)*
+
+### 2.12 Manipulate folder and file (OS)
+
+* Manipulate file
+
+| 01   | rename | Rename file | `os.rename(origin filename, target filename)` |
+| ---- | ------ | ----------- | --------------------------------------------- |
+| 02   | remove | delete file | `os.remove(filename)`                         |
 
 # 01 Procedure Oriented
 

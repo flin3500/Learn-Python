@@ -137,22 +137,19 @@ In this file, it talk about all of the python OOP.
 ### 2.11 Read and write
 
 * Read file *(LN_01)*
-
 * When call read(), the read pointer will go to the end of file   *(LN_02)*
 
-* | Para | Description                                                  |
-  | :--: | :----------------------------------------------------------- |
-  |  r   | Read Only, read pointer will be at beginning, this is the **default** way. If the file not exist, throw exception |
-  |  w   | Write Only. If file exists, overwrite that. If file not exists, make a new one. |
-  |  a   | Append Only. If the file exists, the pointer will at the end of the file. If file not exists, make a new one. |
-  |  r+  | Read and write, read pointer will be at beginning. If the file not exist, throw exception |
-  |  w+  | Read and write. If file exists, overwrite that. If file not exists, make a new one. |
-  |  a+  | Read and write. If the file exists, the pointer will at the end of the file. If file not exists, make a new one. |
+| Para | Description                                                  |
+| :--: | :----------------------------------------------------------- |
+|  r   | Read Only, read pointer will be at beginning, this is the **default** way. If the file not exist, throw exception |
+|  w   | Write Only. If file exists, overwrite that. If file not exists, make a new one. |
+|  a   | Append Only. If the file exists, the pointer will at the end of the file. If file not exists, make a new one. |
+|  r+  | Read and write, read pointer will be at beginning. If the file not exist, throw exception |
+|  w+  | Read and write. If file exists, overwrite that. If file not exists, make a new one. |
+|  a+  | Read and write. If the file exists, the pointer will at the end of the file. If file not exists, make a new one. |
 
-  When call readline(), only the first line will be read.  *(LN_05)*
-
+* When call readline(), only the first line will be read.  *(LN_05)*
 * Copy small: Read a file and write it to a new file.  *(LN_06)*
-
 * Copy large: Readline a file and write it to a new file.  *(LN_07)*
 
 ### 2.12 Manipulate folder and file (OS)
@@ -162,6 +159,16 @@ In this file, it talk about all of the python OOP.
 | 01   | rename | Rename file | `os.rename(origin filename, target filename)` |
 | ---- | ------ | ----------- | --------------------------------------------- |
 | 02   | remove | delete file | `os.remove(filename)`                         |
+
+* Manipulate folder
+
+| 01   | listdir    | list dir                 | `os.listdir(folder name)`      |
+| ---- | ---------- | ------------------------ | ------------------------------ |
+| 02   | mkdir      | Create dir               | `os.mkdir(folder name)`        |
+| 03   | rmdir      | delete dir               | `os.rmdir(folder name)`        |
+| 04   | getcwd     | Current dir              | `os.getcwd()`                  |
+| 05   | chdir      | Change dir to target     | `os.chdir(target folder name)` |
+| 06   | path.isdir | Jusitify if it is folder | `os.path.isdir(folder name)`   |
 
 # 01 Procedure Oriented
 

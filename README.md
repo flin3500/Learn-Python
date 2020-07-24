@@ -106,15 +106,43 @@ In this file, it talk about all of the python OOP.
 * Can use object to get father class attribute from **grandchild -> father -> grandparent -> ... -> Object         Not recommend**  *(LN_02)*
 * If want to use child.dadattr = to set an attr, this only add a new attr to the grandchild, can not change the attr of  its dad. So not recommend for the previous one  *(LN_03)*
 
-#### 2.6 Class Methods
+#### 2.7 Class Methods
 
 * There are three method, instance method, class method and static method
 * Class method example, need @classmethod *(LN_01)*
 * Static method example, need @staticmethid, do not need instance just class.staticmethod()  *(LN_02)*
+* Combine class attributes and class method *(LN_03)*
+
+#### 2.8 Singleton Pattern (One of design Pattern)
+
+* \_\_new__ method is used to allocate address for object, and need to return object to \_\_init__  *(LN_01)*
+* Can change \__new__ method in order to satisfy Singleton Pattern  *(LN_02)*
+* Can change \__init__ method in order to make init only execute once  *(LN_03)*
+
+#### 2.9 Errors and Exception
+
+* Use try except to get the error  *(LN_01)*
+* Use different except to get different error  *(LN_02)*
+* Use "except Exception as result"  to get unknown error  *(LN_03)*
+* The code inside else will occur when no error, the code inside finally will always occur  *(LN_04)*
+* Exception pass can let us only try except in the main, to make us easy  *(LN_05)*
+* Can use Exception class to make a user-define exception *(LN_06)*
+
+#### 2.10 Module
+
+* Review import module *(LN_01, LN_02, LN_03)*
+* can use "import xxxx as xx" to give the module a alias *(LN_01)*
+* can use "from xxxx inport xx" to specify the Function or class which want to import   *(LN_04)*
+* If import same function from different module, the last one will be valid. Or use as to avoid this conflict  *(LN_05)*
+* can use "from xxxx inport \*" to import all from module **Not recommend**  *(LN_06)*
+* The order import module **local folder -> system folder**, use random\__file__ to see the absolute path of that module  *(LN_07)*
+* Make sure every file is able to import
+* \__name__ == "\_\_main\_\_" is used to test. when others inport, the code inside main will not execute **Very Recommend**  *(LN_08, LN_09)*
 
 
 
- 
+* How to create package: two ways *(LN_10)*
+* 
 
 
 

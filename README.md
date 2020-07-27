@@ -220,6 +220,3 @@ In this file, it talk about all of the python basic.
 ### 1.10 [Project] Name Card System
 
 * This is a Name Card System which can add, show and search the cards.
-
-
-

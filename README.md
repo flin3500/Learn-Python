@@ -35,6 +35,21 @@ In this folder, it talk about UDP and TCP.
 
 ### 3.1 UDP
 
+* Server:
+  1. Create a udp server socket
+  2. bind local information(for client to find it)
+  3. receive the data from client (recvfrom()), use a while loop **STUCK here if do not get the data from client**
+  4. send the data to the client if client request (sendto())
+  5. close the udp server socket
+* Client
+  1. create a udp client socket
+  2. send the request to the server by the server ip and port(sendto())
+  3. receive data from server if there is (recvfrom())
+  4. close udp client socket
+
+1. udp and tcp can bind a same port (eg. 8080) at the same time
+2. udp do not need to get a connect whereas tcp need
+
 ### 3.2 TCP
 
 * Server:
@@ -62,11 +77,9 @@ In this folder, it talk about UDP and TCP.
 
 3. listen method can make the server get the information from client
 
-4. tcp need connect method to connect where as udp does not
+4. Client  socket is used to serve the client
 
-5. Client  socket is used to serve the client
-
-6. if a client use close method, server will know and close the client socket for this client
+5. if a client use close method, server will know and close the client socket for this client
 
 # 02 Object Oriented Programming(OOP)
 

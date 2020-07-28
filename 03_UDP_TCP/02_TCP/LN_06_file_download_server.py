@@ -31,7 +31,7 @@ def main():
 
     while True:
 
-        # 4. wait for the data and create the client socket
+        # 4. wait for the client and create the client socket to serve client
         client_socket, client_addr = tcp_server_socket.accept()
 
         # 5. call the send file func

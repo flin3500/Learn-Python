@@ -4,7 +4,7 @@ def main():
 	# 1. create a client socket
 	tcp_client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-	# 2. get the server ip and port
+	# 2. specify the server ip and port
 	server_ip = input("Input server ip: ")
 	server_port = int(input("Input server port: "))
 

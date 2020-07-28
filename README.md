@@ -29,9 +29,48 @@ Python Learning
 
 This is the repository contains the code and difficulties I face when I learn python.
 
+# 03 UDP and TCP
+
+In this folder, it talk about UDP and TCP.
+
+### 3.1 UDP
+
+### 3.2 TCP
+
+* Server:
+  1. Create a tcp server socket(listen socket)
+  2. bind local information(for client to find it)
+  3. listening for the client
+  4. wait for the data and create the client socket to serve client (accept())  **STUCK here if do not get the data from client**
+  5. receive the request from the client and do some response
+  6. send the data to the client if client request
+  7. close the client socket
+  8. close the  tcp server socket(listen socket)
+* Client
+  1. create a tcp client socket
+  2. specify the server ip and port
+  3. connect server
+  4. send the request to the server
+  5. receive data from server if there is
+  6. close tcp client socket
+
+1. In the example above, the server can serve many clients and also serve multiple times in the same time, need to specify the parameter in the listening method.
+
+   ```tcp_server_socket.listen(128)  ``` in this way the server can serve 128 clients.
+
+2. The server must bind the information for the client to find whereas the client do not need to.
+
+3. listen method can make the server get the information from client
+
+4. tcp need connect method to connect where as udp does not
+
+5. Client  socket is used to serve the client
+
+6. if a client use close method, server will know and close the client socket for this client
+
 # 02 Object Oriented Programming(OOP)
 
-In this file, it talk about all of the python OOP.
+In this folder, it talk about all of the python OOP.
 
 ### 2.1 OOP basic grammer
 
@@ -176,7 +215,7 @@ In this file, it talk about all of the python OOP.
 
 # 01 Procedure Oriented
 
-In this file, it talk about all of the python basic.
+In this folder, it talk about all of the python basic.
 
 ### 1.1 Basic
 

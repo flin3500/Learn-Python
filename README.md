@@ -29,6 +29,29 @@ Python Learning
 
 This is the repository contains the code and difficulties I face when I learn python.
 
+# 04 Multitasking
+
+In this folder, it talk about multiytasking
+
+### 4.1 Thread
+
+1. Parallel programming and Concurrent programming
+
+   * Parallel programming: executing simultaneously
+   * Concurrent programming: in progress at the same time
+
+2. Muti thread is not in order, everyone can be the first
+
+3. show the current threads
+
+   ```threading.enumerate()```
+
+4. 
+
+### 4.2 Process
+
+### 4.3 Coroutine
+
 # 03 UDP and TCP
 
 In this folder, it talk about UDP and TCP.

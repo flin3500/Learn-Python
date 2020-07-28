@@ -62,6 +62,8 @@ In this folder, it talk about multiytasking
 
 ### 4.2 Process
 
+1. The different of program and process is that process is active and can use the hardware on the labtop, but the program is static
+
 ### 4.3 Coroutine
 
 # 03 UDP and TCP

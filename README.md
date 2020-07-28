@@ -40,13 +40,23 @@ In this folder, it talk about multiytasking
    * Parallel programming: executing simultaneously
    * Concurrent programming: in progress at the same time
 
-2. Muti thread is not in order, everyone can be the first
+2. Multi thread is not in order, everyone can be the first
 
-3. show the current threads
+3. show the current threads  *(LN_03)*
 
    ```threading.enumerate()```
 
-4. 
+4. Multi thread share global variables  *(LN_04)*
+
+5. Multi thread share global variables in arguments  *(LN_05)*
+
+6. Multi thread share global variables sometimes will cause error  *(LN_06)*
+
+   Because sometimes one thread still do not finish their works, but the cpu just swich to another thread.
+
+7. How to fix the error in multi thread by using mutex *(LN_07)*
+
+8. Know about mutex deadlock
 
 ### 4.2 Process
 

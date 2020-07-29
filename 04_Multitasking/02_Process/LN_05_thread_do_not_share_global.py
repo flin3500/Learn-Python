@@ -8,16 +8,16 @@ nums = [11, 22, 33]
 
 def test():
     nums.append(44)
-    print("在进程中1中nums=%s" % str(nums))
+    print("In process 1: nums=%s" % str(nums))
     time.sleep(3)
 
 
 def test2():
-    print("在进程中2中nums=%s" % str(nums))
+    print("In process 2: nums=%s" % str(nums))
 
 
 def main():
-    print("----in 主进程 pid=%d---父进程pid=%d----" % (os.getpid(), os.getppid()))
+    print("----in main process: pid=%d---in parent process pid=%d----" % (os.getpid(), os.getppid()))
     p = multiprocessing.Process(target=test)
     p.start()
 

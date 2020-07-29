@@ -12,7 +12,7 @@ def test(a, b, c, *args, **kwargs):
 
 
 def main():
-    print("----in 主进程 pid=%d---父进程pid=%d----" % (os.getpid(), os.getppid()))
+    print("----in main process pid=%d---parent process pid=%d----" % (os.getpid(), os.getppid()))
     p = multiprocessing.Process(target=test, args=(11, 22, 33, 44, 55, 66, 77, 88), kwargs={"mm":11})
     p.start()
 

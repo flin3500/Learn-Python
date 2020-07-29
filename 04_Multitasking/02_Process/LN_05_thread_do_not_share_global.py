@@ -17,7 +17,7 @@ def test2():
 
 
 def main():
-    print("----in main process: pid=%d---in parent process pid=%d----" % (os.getpid(), os.getppid()))
+    print("----in main process: pid=%d---in parent process: pid=%d----" % (os.getpid(), os.getppid()))
     p = multiprocessing.Process(target=test)
     p.start()
 

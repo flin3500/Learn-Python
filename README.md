@@ -39,7 +39,7 @@ In this folder, it talk about multiytasking.
 
 ### 4.1 Thread
 
-1. Thread is not in order, everyone can be the first  *(LN_01)*
+1. Threads are not in order, everyone can be the first  *(LN_01)*
 
 2. Use thread to do a multitasking  *(LN_02)*
 
@@ -75,7 +75,19 @@ In this folder, it talk about multiytasking.
 
      eg. Process is a production line in a factory and threads are the workers working in that production line. Once the tasks is too much for one production line. the second production line(process) will be create and more workers(threads) will be hired.
 
-4. Processes are independent with each other(Thread: 4)
+4. Get pid of thread   *(LN_02)*
+
+5. Processes are not in order  *(LN_03)*
+
+6. Pass args to process  *(LN_04)* 
+
+7. Processes are independent with each other, do not share global variable *(LN_05)*
+
+8. Process states
+
+   <div align=center>
+      <img src="./image/process_states.png" width="50%" height="50%">
+   </div>
 
 ### 4.3 Coroutine
 

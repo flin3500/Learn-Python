@@ -31,38 +31,51 @@ This is the repository contains the code and difficulties I face when I learn py
 
 # 04 Multitasking
 
-In this folder, it talk about multiytasking
-
-### 4.1 Thread
+In this folder, it talk about multiytasking.
 
 1. Parallel programming and Concurrent programming
-
    * Parallel programming: executing simultaneously
    * Concurrent programming: in progress at the same time
 
-2. Multi thread is not in order, everyone can be the first
+### 4.1 Thread
+
+1. Thread is not in order, everyone can be the first  *(LN_01)*
+
+2. Use thread to do a multitasking  *(LN_02)*
 
 3. show the current threads  *(LN_03)*
 
    ```threading.enumerate()```
 
-4. Multi thread share global variables  *(LN_04)*
+4. Threads share global variables  *(LN_04)*
 
-5. Multi thread share global variables in arguments  *(LN_05)*
+5. Threads share global variables in arguments  *(LN_05)*
 
-6. Multi thread share global variables sometimes will cause error  *(LN_06)*
+6. Threads share global variables sometimes will cause error  *(LN_06)*
 
    Because sometimes one thread still do not finish their works, but the cpu just swich to another thread.
 
-7. How to fix the error in multi thread by using mutex *(LN_07)*
+7. How to fix the error in multitasking(thread) by using mutex *(LN_07)*
 
 8. Know about mutex deadlock
 
-9. [Project] UDP multithread chatting program
+9. [Project] UDP multitasking chatting program by thread  *(LN_08)*
 
 ### 4.2 Process
 
 1. The different of program and process is that process is active and can use the hardware on the labtop, but the program is static
+
+2. Use process to do a multitasking  *(LN_01)*
+
+3. The difference of threads and processes
+
+   * thread depends on process
+
+   * process allocates memory, threads are working in this  memory
+
+     eg. Process is a production line in a factory and threads are the workers working in that production line. Once the tasks is too much for one production line. the second production line(process) will be create and more workers(threads) will be hired.
+
+4. Processes are independent with each other(Thread: 4)
 
 ### 4.3 Coroutine
 

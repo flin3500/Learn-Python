@@ -83,11 +83,17 @@ In this folder, it talk about multiytasking.
 
 7. Processes are independent with each other, do not share global variable *(LN_05)*
 
-8. Process states
+8. Use queue to share between processes  *(LN_06)*
 
-   <div align=center>
-      <img src="./image/process_states.png" width="50%" height="50%">
-   </div>
+   **Mac python3.0 by default uses "spawn" instead of "fork", need to add   ```multiprocessing.set_start_method("fork")``` at the start of main** from https://stackoverflow.com/questions/60518386/error-with-module-multiprocessing-under-python3-8
+
+9. Processing Pool
+
+10. Process states
+
+    <div align=center>
+       <img src="./image/process_states.png" width="50%" height="50%">
+    </div>
 
 ### 4.3 Coroutine
 

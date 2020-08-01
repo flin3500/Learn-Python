@@ -87,7 +87,9 @@ In this folder, it talk about multiytasking.
 
    **Mac python3.0 by default uses "spawn" instead of "fork" when start, The following need to add at the start of main  **
 
-   **```multiprocessing.set_start_method("fork")``` **
+   ```python
+   multiprocessing.set_start_method("fork")
+   ```
 
    from https://stackoverflow.com/questions/60518386/error-with-module-multiprocessing-under-python3-8
 
@@ -107,7 +109,7 @@ In this folder, it talk about multiytasking.
 
    1. Make an object iterable
 
-      1. add ```__iter__(self)``` method inside the class which create the object
+      1. had ```__iter__(self)``` method inside the class which create the object
       2. The ```__iter__(self)``` method inside 1 must return an Iterator
       3. There must have ```__iter__(self)``` and ```__next__(self)``` method in the Iterator
 
@@ -131,7 +133,12 @@ In this folder, it talk about multiytasking.
 
    6. Iterator only need the memory for code, but the normal way need the memory to save all the numbers
 
-2. 
+2. Generator
+
+   1. Generator is a kind of Iterator
+   2. If ```yield``` is in a function, then this is not function anymore and become a generator. Also, can not using this function anymore but create a generator
+
+3. Asd
 
 # 03 UDP and TCP
 

@@ -103,7 +103,7 @@ In this folder, it talk about multiytasking.
 
 ### 4.3 Coroutine
 
-1. Iterator
+1. Iterator  *(LN_01, LN_02, LN_03)*
 
    1. Make an object iterable
 
@@ -125,7 +125,11 @@ In this folder, it talk about multiytasking.
       isinstance(OBJECT, Iterator)
       ```
 
-   4. 
+   4. xrange() is using iterator and range() is using memory (in Python2)
+
+   5. range() is using iterator (in Python3)
+
+   6. Iterator only need the memory for code, but the normal way need the memory to save all the numbers
 
 2. 
 

@@ -99,6 +99,32 @@ In this folder, it talk about multiytasking.
 
 ### 4.3 Coroutine
 
+1. Iterator
+
+   1. Make an object iterable
+
+      1. add ```__iter__(self)``` method inside the class which create the object
+      2. The ```__iter__(self)``` method inside 1 must return an Iterator
+      3. There must have ```__iter__(self)``` and ```__next__(self)``` method in the Iterator
+
+   2. Justify if an object can Iterate 
+
+      ```python
+      from collections import Iterable
+      isinstance(OBJECT, Iterable)
+      ```
+
+   3. Justify it is an Iterator
+
+      ```python
+      from collections import Iterator
+      isinstance(OBJECT, Iterator)
+      ```
+
+   4. 
+
+2. 
+
 # 03 UDP and TCP
 
 In this folder, it talk about UDP and TCP.

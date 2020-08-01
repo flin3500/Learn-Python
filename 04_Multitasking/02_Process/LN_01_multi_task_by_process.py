@@ -14,7 +14,6 @@ def test2():
                 time.sleep(1)
 
 def main():
-
         t1 = multiprocessing.Process(target=test1)
         t2 = multiprocessing.Process(target=test2)
         t1.start()

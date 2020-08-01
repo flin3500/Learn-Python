@@ -133,13 +133,20 @@ In this folder, it talk about multiytasking.
 
    6. Iterator only need the memory for code, but the normal way need the memory to save all the numbers
 
-2. Generator
+2. Generator  *(LN_04, LN_05, LN_06)*
 
-   1. Generator is a kind of Iterator
-   2. If ```yield``` is in a function, then this is not function anymore and become a generator. Also, can not using this function anymore but create a generator
-   3. next(Generator) and Generator.send("string") also can start generator
+   1. Generator is a kind of Iterator (but do not have iter and next method)
+   2. Generator can stop in the yield and restart, the variable inside will not change
+   3. If ```yield``` is in a function, then this is not function anymore and become a generator. Also, can not using this function anymore but create a generator
+   4. next(Generator) and Generator.send("string")  can start generator
+      * NEXT can not pass args but SEND can pass args
+      * do not use SEND for the first one when there is no things outside of the loop to get the args
 
-3. Asd
+3. Yield Multitasking
+
+   1. 
+
+4. 
 
 # 03 UDP and TCP
 

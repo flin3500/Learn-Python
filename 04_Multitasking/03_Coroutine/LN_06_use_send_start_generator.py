@@ -7,12 +7,12 @@ def create(number):
 		count += 1
 
 
-obj = create(50)
+obj = create(10)
 
 
-while True:
-	try:
-		ret = next(obj)
-		print(ret)
-	except Exception as error:
-		break
+ret = next(obj)
+print(ret)
+
+ret = obj.send("haha")
+print(ret) 
+

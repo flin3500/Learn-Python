@@ -89,7 +89,9 @@ In this folder, it talk about multiytasking.
 
 9. Processing Pool  *(LN_07)*
 
-10. Process states
+10. [Project] Copy folder multitasking program by process  *(LN_08)*
+
+11. Process states
 
     <div align=center>
        <img src="./image/process_states.png" width="50%" height="50%">

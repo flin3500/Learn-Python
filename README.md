@@ -148,7 +148,7 @@ In this folder, it talk about multiytasking.
    2. Gevent is an encapsulation of greenlet
    3. Use monkey and joinall in gevent  **Recommend this**
 
-4. Coroutine is one process, one thread, but just use the sleep time to do another thing
+4. Coroutine is one process, one thread, but just use the sleep time to do another thing, which is the most efficient
 
 # 03 UDP and TCP
 

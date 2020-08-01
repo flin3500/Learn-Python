@@ -10,6 +10,7 @@ def test():
 
 
 def main():
+    multiprocessing.set_start_method("fork")
     print("----in main process pid=%d---parent process pid=%d----" % (os.getpid(), os.getppid()))
     p = multiprocessing.Process(target=test)
     p.start()

@@ -7,8 +7,12 @@ def create(number):
 		count += 1
 
 
-obj = create(10)
+obj = create(50)
 
-for number in obj:
-	print(number)
 
+while True:
+	try:
+		ret = next(obj)
+		print(ret)
+	except Exception as error:
+		break

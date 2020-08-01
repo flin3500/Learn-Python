@@ -137,6 +137,7 @@ In this folder, it talk about multiytasking.
 
    1. Generator is a kind of Iterator
    2. If ```yield``` is in a function, then this is not function anymore and become a generator. Also, can not using this function anymore but create a generator
+   3. next(Generator) and Generator.send("string") also can start generator
 
 3. Asd
 

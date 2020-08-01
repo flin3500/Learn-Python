@@ -142,9 +142,9 @@ In this folder, it talk about multiytasking.
       * NEXT can not pass args but SEND can pass args
       * do not use SEND for the first one when there is no things outside of the loop to get the args
 
-3. Yield Multitasking
+3. Yield Multitasking, Greenlet Multitasking, **Gevent Multitasking**
 
-   1. 
+   1. Greenlet is an encapsulation of yield, is more concise
 
 4. 
 

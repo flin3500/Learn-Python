@@ -85,7 +85,11 @@ In this folder, it talk about multiytasking.
 
 8. Use queue to share between processes  *(LN_06)*
 
-   **Mac python3.0 by default uses "spawn" instead of "fork" when start, need to add   ```multiprocessing.set_start_method("fork")``` at the start of main** from https://stackoverflow.com/questions/60518386/error-with-module-multiprocessing-under-python3-8
+   **Mac python3.0 by default uses "spawn" instead of "fork" when start, The following need to add at the start of main  **
+
+   **```multiprocessing.set_start_method("fork")``` **
+
+   from https://stackoverflow.com/questions/60518386/error-with-module-multiprocessing-under-python3-8
 
 9. Processing Pool  *(LN_07)*
 

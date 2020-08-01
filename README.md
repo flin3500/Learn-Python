@@ -142,11 +142,13 @@ In this folder, it talk about multiytasking.
       * NEXT can not pass args but SEND can pass args
       * do not use SEND for the first one when there is no things outside of the loop to get the args
 
-3. Yield Multitasking, Greenlet Multitasking, **Gevent Multitasking**
+3. Yield Multitasking, Greenlet Multitasking, **Gevent Multitasking (use this)**  *(LN_07, LN_08, LN_09, LN_10)*
 
    1. Greenlet is an encapsulation of yield, is more concise
+   2. Gevent is an encapsulation of greenlet
+   3. Use monkey and joinall in gevent  **Recommend this**
 
-4. 
+4. Coroutine is one process, one thread, but just use the sleep time to do another thing
 
 # 03 UDP and TCP
 

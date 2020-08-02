@@ -2,39 +2,39 @@ Table of Contents
 =================
 
    * [Introduction](#introduction)
-   * [05 Web server](#05-web-server)
+   * [05 Web server](#05-web-server)<br>
          * [5.1 Regex](#51-regex)
-   * [04 Multitasking](#04-multitasking)
-         * [4.1 Thread](#41-thread)
-         * [4.2 Process](#42-process)
+   * [04 Multitasking](#04-multitasking)<br>
+         * [4.1 Thread](#41-thread)<br>
+         * [4.2 Process](#42-process)<br>
          * [4.3 Coroutine](#43-coroutine)
-   * [03 UDP and TCP](#03-udp-and-tcp)
-         * [3.1 UDP](#31-udp)
+   * [03 UDP and TCP](#03-udp-and-tcp)<br>
+         * [3.1 UDP](#31-udp)<br>
          * [3.2 TCP](#32-tcp)
-   * [02 Object Oriented Programming(OOP)](#02-object-oriented-programmingoop)
-         * [2.1 OOP basic grammer](#21-oop-basic-grammer)
-         * [2.2 Encapsulation (One feature of OOP)](#22-encapsulation-one-feature-of-oop)
-         * [2.3 Inheritance (One feature of OOP)](#23-inheritance-one-feature-of-oop)
-         * [2.4 Multiple inheritance](#24-multiple-inheritance)
-         * [2.5 Polymorphism (One feature of OOP)](#25-polymorphism-one-feature-of-oop)
-         * [2.6 Class Attributes](#26-class-attributes)
-         * [2.7 Class Methods](#27-class-methods)
-         * [2.8 Singleton Pattern (One of design Pattern)](#28-singleton-pattern-one-of-design-pattern)
-         * [2.9 Errors and Exception](#29-errors-and-exception)
-         * [2.10 Module](#210-module)
-         * [2.11 Read and write](#211-read-and-write)
+   * [02 Object Oriented Programming(OOP)](#02-object-oriented-programmingoop)<br>
+         * [2.1 OOP basic grammer](#21-oop-basic-grammer)<br>
+         * [2.2 Encapsulation (One feature of OOP)](#22-encapsulation-one-feature-of-oop)<br>
+         * [2.3 Inheritance (One feature of OOP)](#23-inheritance-one-feature-of-oop)<br>
+         * [2.4 Multiple inheritance](#24-multiple-inheritance)<br>
+         * [2.5 Polymorphism (One feature of OOP)](#25-polymorphism-one-feature-of-oop)<br>
+         * [2.6 Class Attributes](#26-class-attributes)<br>
+         * [2.7 Class Methods](#27-class-methods)<br>
+         * [2.8 Singleton Pattern (One of design Pattern)](#28-singleton-pattern-one-of-design-pattern)<br>
+         * [2.9 Errors and Exception](#29-errors-and-exception)<br>
+         * [2.10 Module](#210-module)<br>
+         * [2.11 Read and write](#211-read-and-write)<br>
          * [2.12 Manipulate folder and file (OS)](#212-manipulate-folder-and-file-os)
-   * [01 Procedure Oriented](#01-procedure-oriented)
-         * [1.1 Basic](#11-basic)
-         * [1.2 Branch](#12-branch)
-         * [1.3 Loop](#13-loop)
-         * [1.4 Function](#14-function)
-         * [1.5 Module](#15-module)
-         * [1.6 List and Tuple](#16-list-and-tuple)
-         * [1.7 Dictionary](#17-dictionary)
-         * [1.8 String](#18-string)
-         * [1.9 For](#19-for)
-         * [1.10 [Project] Name Card System](#110-project-name-card-system)
+   * [01 Procedure Oriented](#01-procedure-oriented)<br>
+         * [1.1 Basic](#11-basic)<br>
+         * [1.2 Branch](#12-branch)<br>
+         * [1.3 Loop](#13-loop)<br>
+         * [1.4 Function](#14-function)<br>
+         * [1.5 Module](#15-module)<br>
+         * [1.6 List and Tuple](#16-list-and-tuple)<br>
+         * [1.7 Dictionary](#17-dictionary)<br>
+         * [1.8 String](#18-string)<br>
+         * [1.9 For](#19-for)<br>
+         * [1.10 [Project] Name Card System](#110-project-name-card-system)<br>
 
 # Introduction
 

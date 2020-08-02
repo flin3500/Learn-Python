@@ -29,6 +29,20 @@ Python Learning
 
 This is the repository contains the code and difficulties I face when I learn python.
 
+# 05 Web server
+
+In this folder, it talk about web server.
+
+### 5.1 Regex
+
+1. All language have
+   1. Match *(LN_01, LN_02)* 
+2. In python
+   1. Search -> the first one found
+   2. Findall -> a list of all found
+   3. Sub -> change the found with the parameter, also can call function
+   4. Split -> split a string and return a list of substring
+
 # 04 Multitasking
 
 In this folder, it talk about multiytasking.

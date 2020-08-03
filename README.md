@@ -115,6 +115,8 @@ In this folder, it talk about web server.
 
 10. One process, one thread, non blocking  *(LN_06)* 
 
+11. One process, one thread, non blocking, long connection  *(LN_07)* 
+
 # 04 Multitasking
 
 In this folder, it talk about multiytasking.

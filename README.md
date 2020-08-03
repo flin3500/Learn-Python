@@ -96,10 +96,16 @@ In this folder, it talk about web server.
 4. Three handshakes
 
    <div align=center>
-      <img src="./image/three_handshakes.png" width="50%" height="50%">
+      <img src="./image/three_handshakes.jpg" width="50%" height="50%">
    </div>
 
-5. 
+5. Four waves
+
+   <div align=center>
+      <img src="./image/four_waves.jpg" width="50%" height="50%">
+   </div>
+
+6. 
 
 # 04 Multitasking
 

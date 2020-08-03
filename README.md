@@ -91,21 +91,27 @@ In this folder, it talk about web server.
    cp-extension-installed: Yes
    ```
 
-3. Use python to write a static webserver 
-
-4. Three handshakes
+3. Three handshakes
 
    <div align=center>
       <img src="./image/three_handshakes.jpg" width="50%" height="50%">
    </div>
 
-5. Four waves
+4. Four waves
 
    <div align=center>
       <img src="./image/four_waves.jpg" width="50%" height="50%">
    </div>
 
-6. 
+5. Write a static webserver  *(LN_01)* 
+
+6. Write an active webserver  *(LN_02)* 
+
+7. Use multiprocessing to write an active webserver  *(LN_03)* 
+
+8. Use threading to write an active webserver  *(LN_04)* 
+
+9. Use gevent to write an active webserver 
 
 # 04 Multitasking
 

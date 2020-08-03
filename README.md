@@ -54,6 +54,53 @@ In this folder, it talk about web server.
    3. Sub -> change the found with the parameter, also can call function
    4. Split -> split a string and return a list of substring
 
+### 5.2 Hypertext Transfer Protocol(HTTP)
+
+1. The response header(baidu as an example)
+
+   ```http
+   HTTP/1.1 200 OK
+   Bdpagetype: 2
+   Bdqid: 
+   Cache-Control: private
+   Connection: keep-alive
+   Content-Encoding: gzip
+   Content-Type: text/html;charset=utf-8
+   Date: 
+   Expires: 
+   Server: BWS/1.1
+   Set-Cookie: 
+   Traceid: 
+   X-Ua-Compatible: IE=Edge,chrome=1
+   Transfer-Encoding: chunked
+   ```
+
+2. The request header(baidu as an example)
+
+   ```http
+   GET / HTTP/1.1
+   Host: www.baidu.com
+   Connection: keep-alive
+   Cache-Control: max-age=0
+   Upgrade-Insecure-Requests: 1
+   User-Agent: Chrome Safari
+   Accept: 
+   Accept-Encoding: gzip, deflate
+   Accept-Language: en,zh-CN;q=0.9,zh;q=0.8
+   Cookie: 
+   cp-extension-installed: Yes
+   ```
+
+3. Use python to write a static webserver 
+
+4. Three handshakes
+
+   <div align=center>
+      <img src="./image/three_handshakes.png" width="50%" height="50%">
+   </div>
+
+5. 
+
 # 04 Multitasking
 
 In this folder, it talk about multiytasking.

@@ -117,7 +117,7 @@ In this folder, it talk about web server.
 
 11. One process, one thread, non blocking, long connection  *(LN_07)*
 
-12. Epoll (work in linux   **Recommend**)
+12. Epoll (work in linux   **Recommend**)  *(LN_08)*
 
     1. Kernel share memory with server, kernal do not need to copy.
 
@@ -150,7 +150,60 @@ In this folder, it talk about web server.
          
        ```
 
-       
+### 5.3 TCP/IP
+
+1. tcp/ip transport layer
+
+   <div align=center>
+      <img src="./image/tcp_ip.jpeg" width="50%" height="50%">
+   </div>
+
+2. tcp/ip encapsulation and decapsulation
+
+   <div align=center>
+      <img src="./image/tcp_ip_encapsulation.png" width="50%" height="50%">
+   </div>
+
+3. two computers connect
+
+   <div align=center>
+      <img src="./image/computers_connect.png" width="50%" height="50%">
+   </div>
+
+4. Computers connect by hub (out-of-date)
+
+   <div align=center>
+      <img src="./image/computers_connect_by_hub.png" width="50%" height="50%">
+   </div>
+
+5. Computers connect by switch
+
+   <div align=center>
+      <img src="./image/computers_connect_by_switch.png" width="50%" height="50%">
+   </div>
+
+6. Computers connect by router
+
+   <div align=center>
+      <img src="./image/computers_connect_by_router.png" width="50%" height="50%">
+   </div>
+
+7. Computer connect in internet
+
+   <div align=center>
+      <img src="./image/computers_connect_in_internet.png" width="50%" height="50%">
+   </div>
+
+8. In web
+
+   1. **MAC address**: A media access control address is a unique identifier assigned to a network interface controller for use as a network address in communications within a network segment.
+   2. **IP address**: a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication.
+   3. **IP subnet mask**: A subnetwork or subnet is a logical **subdivision** of an IP network.
+   4. **Default gateway**: A default gateway is the node in a computer network using the internet protocol suite that serves as the forwarding host to **other networks** when no other route specification matches the destination IP address of a packet.
+   5. Hub(out-of-date):  A hub is a physical layer networking device which is used to connect multiple devices in a network.
+   6. **Switch**: A switch is a device in **a computer network** that connects other devices together.
+   7. **Router**: A router is a networking device that forwards data packets **between computer networks**.
+   8. **DNS server**(Domain Name System):  The Internet's system for converting alphabetic names into numeric IP addresses.
 
 #  04 Multitasking
 

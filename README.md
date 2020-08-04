@@ -40,9 +40,22 @@ Table of Contents
 
 This is the repository contains the code and difficulties I face when I learn python.
 
+# 06 Advanced Python
+
+ In this folder, it talks about advanced python.
+
+### 6.1 GIL
+
+1. Single thread endless loop on the laptop  *(LN_01)*
+2. Two threads endless loop on the laptop *(LN_02)*
+3. Two processed endless loop on the laptop *(LN_03)*
+4. **GIL only allow one thread at a time**. Global Interpreter Lock, is a boolean value in the Python interpreter, protected by a mutex.
+5. **I/O bound: Threads/ Gevent   Compute bound: Multiprocesses**
+6. Use C to avoid GIL  *(LN_04)*
+
 # 05 Web server
 
-In this folder, it talk about web server.
+In this folder, it talks about web server.
 
 ### 5.1 Regex
 

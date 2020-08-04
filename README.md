@@ -115,9 +115,44 @@ In this folder, it talk about web server.
 
 10. One process, one thread, non blocking  *(LN_06)* 
 
-11. One process, one thread, non blocking, long connection  *(LN_07)* 
+11. One process, one thread, non blocking, long connection  *(LN_07)*
 
-# 04 Multitasking
+12. Epoll (work in linux   **Recommend**)
+
+    1. Kernel share memory with server, kernal do not need to copy.
+
+    2. select -> poll -> epoll
+
+       ```python
+       """
+       create an epoll object
+       """
+       epl = select.epoll()
+       # register listen socket fd into epl
+       epl.register(listen_socket.fileno(), select.EPOLLIN)
+       
+       # make a dict to save the fds
+       fd_event_list = dict()
+       
+       while True:
+         fd_event_list = epl.poll()
+         for fd, event in fd_event_list:
+           if fd == listen_socket.fileno():
+             serve_socket, client_address = listen_socket.accept()
+             epl.register(serve_socket.fileno(), select.EPOLLIN)
+             fd_event_listp[serve_socket.fileno()] = serve_socket
+          	elif event == select.EPOLLIN:
+             recv_data = fd_event_list[fd].recv(1024).decode("utf-8")
+             if recv_data:
+               serve_client(fd_event_list[fd], recv_data)
+             else:
+               fd_event_list[fd].close()
+         
+       ```
+
+       
+
+#  04 Multitasking
 
 In this folder, it talk about multiytasking.
 

@@ -95,6 +95,20 @@ This is the repository contains the code and difficulties I face when I learn py
        <img src="./image/dict_copy.png" width="50%" height="50%">
     </div>
 
+### 6.3 Import(trick)
+
+1. import will import the whole module, and can change variable inside that module
+
+   <div align=center>
+      <img src="./image/import.png" width="50%" height="50%">
+   </div>
+
+2. from import will only use a variable to reference that value of the import thing, use equal to change only change the local one rather than the one in the module import
+
+   <div align=center>
+      <img src="./image/from_import.png" width="50%" height="50%">
+   </div>
+
 # 05 Web server
 
 In this folder, it talks about web server.

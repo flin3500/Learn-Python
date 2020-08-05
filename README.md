@@ -347,7 +347,57 @@ This is the repository contains the code and difficulties I face when I learn py
     del obj[0:2]                # run __delslice__
     ```
 
-11. 
+### 6.7 Contextmanager
+
+1. with open
+
+   ```python
+   def m3():
+       with open("output.txt", "r") as f:
+           f.write("Python")
+   ```
+
+2. Every object contains \_\_enter__ and \_\_exit__  is  a context manager
+
+   ```python
+   class File():
+   
+       def __init__(self, filename, mode):
+           self.filename = filename
+           self.mode = mode
+   
+       def __enter__(self):
+           print("entering")
+           self.f = open(self.filename, self.mode)
+           return self.f
+   
+       def __exit__(self, *args):
+           print("will exit")
+           self.f.close()
+           
+           
+   with File('out.txt', 'w') as f:
+       print("writing")
+       f.write('hello, python')
+   ```
+
+3. Use contextmanager **Recommend**
+
+   before yield is enter method, after yield is exit method
+
+   ```python
+   from contextlib import contextmanager
+   
+   @contextmanager
+   def my_open(path, mode):
+       f = open(path, mode)
+       yield f
+       f.close()
+       
+       
+   with my_open('out.txt', 'w') as f:
+       f.write("hello , the simplest context manager")
+   ```
 
 # 05 Web server
 

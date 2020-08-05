@@ -53,6 +53,36 @@ This is the repository contains the code and difficulties I face when I learn py
 5. **I/O bound: Threads/ Gevent   Compute bound: Multiprocesses**
 6. Use C to avoid GIL  *(LN_04)*
 
+### 6.2 Deep copy & Shadow copy
+
+1. **Immutable variable**: tuple, int, string, float, bool
+
+2. **Mutable variable**: dict, set, list
+
+3. If copy something from a **all immutable variable**( can not be like list inside tuple, need all to be immutable variable), shadow copy and deepcopy will be reference.
+
+4. If copy something **outside most is immutable variable**, shadow copy is only for reference, but deepcopy copy outer most and all mutable variable inside.
+
+5. If copy something **outside most is mutable variable**, shadow copy copy outer most, inside still be reference, but deepcopy copy outer most and all mutable variable inside.
+
+6. Shadow copy (outer most mutable, outer most will be copy, inside is still reference)
+
+   <div align=center>
+      <img src="./image/shadow_copy.png" width="50%" height="50%">
+   </div>
+
+7. Deep copy (outer most mutable, all will be real copy)
+
+   <div align=center>
+      <img src="./image/deep_copy.png" width="50%" height="50%">
+   </div>
+
+8. if the original one change after the shodow copy, the shadow copy one will not change if the original one append a new item, only reference the copy items
+
+   <div align=center>
+      <img src="./image/shadow_copy2.png" width="50%" height="50%">
+   </div>
+
 # 05 Web server
 
 In this folder, it talks about web server.

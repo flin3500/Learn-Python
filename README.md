@@ -116,6 +116,52 @@ This is the repository contains the code and difficulties I face when I learn py
 3. Use parent to inherit, if two parent inherit from a same grandparent, the grandparent will be run for two times.   *(LN_01)* 
 4. Use super() to inherit, it will inherit based on the \_\_mro__method, which will avoid two times running grandparent.  *(LN_02)* 
 
+### 6.5 @Property
+
+1. @property in python is easy to use because in this way, we do not need to consider about the parameters.
+
+   ```python
+   class Foo:
+       @property
+       def prop(self):
+           pass
+         
+   foo_obj = Foo()
+   foo_obj.prop
+   ```
+
+2. First way to create @property  (Decorator)
+
+   Three methods in @property, class need inherit object(get, set, delete)
+
+   ```python
+   class Goods(object):
+   
+       def __init__(self):
+           self.original_price = 100
+           self.discount = 0.8
+   		#get
+       @property
+       def price(self):
+           new_price = self.original_price * self.discount
+           return new_price
+   		#set
+       @price.setter
+       def price(self, value):
+           self.original_price = value
+   		#del
+       @price.deleter
+       def price(self):
+           del self.original_price
+   
+   obj = Goods()
+   obj.price      	# get
+   obj.price = 200	# set
+   del obj.price		# del
+   ```
+
+3. 
+
 # 05 Web server
 
 In this folder, it talks about web server.

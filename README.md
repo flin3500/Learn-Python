@@ -83,6 +83,18 @@ This is the repository contains the code and difficulties I face when I learn py
       <img src="./image/shadow_copy2.png" width="50%" height="50%">
    </div>
 
+9. Slice list
+
+   <div align=center>
+      <img src="./image/slice_list.png" width="50%" height="50%">
+   </div>
+
+10. Dict copy
+
+    <div align=center>
+       <img src="./image/dict_copy.png" width="50%" height="50%">
+    </div>
+
 # 05 Web server
 
 In this folder, it talks about web server.

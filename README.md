@@ -132,7 +132,7 @@ This is the repository contains the code and difficulties I face when I learn py
 
 2. First way to create @property  (Decorator)
 
-   Three methods in @property, class need inherit object(get, set, delete)
+   Three methods in @property, class need inherit object (get, set, delete)
 
    ```python
    class Goods(object):
@@ -188,7 +188,9 @@ This is the repository contains the code and difficulties I face when I learn py
    del obj.BAR						 # third parameter in property
    ```
 
-4. 
+4. Third way to create @property  (Django)   *(LN_01)*
+
+5. 
 
 # 05 Web server
 

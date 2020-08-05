@@ -160,7 +160,35 @@ This is the repository contains the code and difficulties I face when I learn py
    del obj.price		# del
    ```
 
-3. 
+3. Second way to create @property  (class attribute)
+
+   ```python
+   class Foo(object):
+       def get_bar(self):
+           print("getter...")
+           return 'laowang'
+   
+       def set_bar(self, value): 
+           """two parameters"""
+           print("setter...")
+           return 'set value' + value
+   
+       def del_bar(self):
+           print("deleter...")
+           return 'laowang'
+   
+       BAR = property(get_bar, set_bar, del_bar, "description...")
+   
+   obj = Foo()
+   
+   obj.BAR                # first parameter in property
+   obj.BAR = "alex"       # second parameter in property
+   desc = Foo.BAR.__doc__ # fourth parameter in property
+   print(desc)
+   del obj.BAR						 # third parameter in property
+   ```
+
+4. 
 
 # 05 Web server
 

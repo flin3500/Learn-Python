@@ -190,7 +190,164 @@ This is the repository contains the code and difficulties I face when I learn py
 
 4. Third way to create @property  (Django)   *(LN_01)*
 
-5. 
+5. demo1 pages  *(LN_02)*
+
+6. demo2 get set in class attributes  *(LN_03)*
+
+7. Demo3 get set in decorator  *(LN_04)*
+
+### 6.6 Magic method
+
+1. \_\_doc__ method shows the description of the class
+
+   ```python
+   class Foo:
+       """ description of Foo """
+       def func(self):
+           pass
+   
+   print(Foo.__doc__)
+   # [output]description of Foo
+   ```
+
+2. \_\_class__ method shows which class create current oject
+
+   ```python
+   class T(object):
+     """description of T"""
+     
+   t = T()
+   t.__class__
+   # [output]__main__.T
+   ```
+
+3. \_\_module__ method shows which module create current oject
+
+   ```python
+   class T(object):
+     """description of T"""
+     
+   t = T()
+   t.__module__
+   # [output]__main__
+   ```
+
+4. \__init__  method and \_\_new__ method together create an object
+
+   ```python
+   class Person: 
+       def __init__(self, name):
+           self.name = name
+           self.age = 18
+   
+   obj = Person('William')  
+   ```
+
+5. \__del__  method delete object
+
+   ```python
+   class Foo:
+       def __del__(self):
+           pass
+   ```
+
+6. \__call__  method
+
+   ```python
+   class Foo:
+       def __init__(self):
+           pass
+   
+       def __call__(self, *args, **kwargs):
+           print('__call__')
+   
+   
+   obj = Foo()  
+   obj() # call method
+   ```
+
+7. \__dict__  method can check all attributes in a class or object
+
+   ```python
+   class City(object):
+       country = 'Australia'
+   
+       def __init__(self, name, count):
+           self.name = name
+           self.count = count
+   
+       def func(self, *args, **kwargs):
+           print('func')
+   
+   print(City.__dict__)
+   # [output]{'__dict__': <attribute '__dict__' of 'City' objects>, '__module__': '__main__', 'country': 'Australia', '__doc__': None, '__weakref__': <attribute '__weakref__' of 'City' objects>, 'func': <function City.func at 0x101897950>, '__init__': <function City.__init__ at 0x1018978c8>}
+   
+   obj1 = City('Sydney', 10000)
+   print(obj1.__dict__)
+   # [output]{'count': 10000, 'name': 'Sydney'}
+   
+   obj2 = City('Canberra', 20000)
+   print(obj2.__dict__)
+   # [output]{'count': 20000, 'name': 'Canberra'}
+   ```
+
+8. \__str__  method
+
+   ```python
+   class Foo:
+       def __str__(self):
+           return 'William'
+   
+   
+   obj = Foo()
+   print("obj is %s" % obj)
+   # [output]obj is William
+   ```
+
+9. \_\_getitem__  \_\_setitem__  \_\_delitem__  method
+
+   ```python
+   class Foo(object):
+   
+       def __getitem__(self, key):
+           print('__getitem__', key)
+   
+       def __setitem__(self, key, value):
+           print('__setitem__', key, value)
+   
+       def __delitem__(self, key):
+           print('__delitem__', key)
+   
+   
+   obj = Foo()
+   
+   result = obj['k1']      # run __getitem__
+   obj['k2'] = 'william'   # run __setitem__
+   del obj['k1']           # run __delitem__
+   ```
+
+10. \_\_getslice__  \_\_setslice__  \_\_delslice__  method
+
+    ```python
+    class Foo(object):
+    
+        def __getslice__(self, i, j):
+            print('__getslice__', i, j)
+    
+        def __setslice__(self, i, j, sequence):
+            print('__setslice__', i, j)
+    
+        def __delslice__(self, i, j):
+            print('__delslice__', i, j)
+    
+    obj = Foo()
+    
+    obj[-1:1]                   # run __getslice__
+    obj[0:1] = [11,22,33,44]    # run __setslice__
+    del obj[0:2]                # run __delslice__
+    ```
+
+11. 
 
 # 05 Web server
 

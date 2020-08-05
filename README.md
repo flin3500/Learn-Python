@@ -109,6 +109,13 @@ This is the repository contains the code and difficulties I face when I learn py
       <img src="./image/from_import.png" width="50%" height="50%">
    </div>
 
+### 6.4 MRO (C3 linearization algorithm)
+
+1. Super() based on \__mro__ method. Parent do not use \_\_mro__ method.    **Recommend super()** 
+2. Super() also can set parameter, **super(specified class in MRO, self)**, in this way, super will inherit based on the specified class.
+3. Use parent to inherit, if two parent inherit from a same grandparent, the grandparent will be run for two times.   *(LN_01)* 
+4. Use super() to inherit, it will inherit based on the \_\_mro__method, which will avoid two times running grandparent.  *(LN_02)* 
+
 # 05 Web server
 
 In this folder, it talks about web server.

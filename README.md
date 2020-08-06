@@ -40,6 +40,85 @@ Table of Contents
 
 This is the repository contains the code and difficulties I face when I learn python.
 
+# 07 Mysql
+
+ In this folder, it talks about mysql.
+
+### 7.1 Mysql grammer
+
+1. start mysql
+
+   ```mysql
+   mysql -uroot -p
+   ```
+
+2. exit mysql
+
+   ```mysql
+   exit/quit/ctrl+d
+   ```
+
+3. show version of mysql
+
+   ```mysql
+   select version();
+   ```
+
+4. show all databases
+
+   ```mysql
+   show databases; 
+   ```
+
+5. create database
+
+   ```mysql
+   create database python2;
+   create database python2 charset=utf8;
+   ```
+
+6. show created database
+
+   ```mysql
+   show create database python2;
+   ```
+
+7. as
+
+8. das
+
+9. d
+
+10. as
+
+11. d
+
+12. as
+
+13. das
+
+14. d
+
+15. as
+
+16. d
+
+17. as
+
+18. d
+
+19. as
+
+20. das
+
+21. d
+
+22. sa
+
+23. d
+
+24. a
+
 # 06 Advanced Python
 
  In this folder, it talks about advanced python.

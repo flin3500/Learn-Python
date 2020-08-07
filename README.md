@@ -316,17 +316,21 @@ This is the repository contains the code and difficulties I face when I learn py
    ```mysql
    select * from students limit 5;
    select * from students limit 6,2;
-   select * from students where is_delete=0 limit (n-1)*m,m
+   select * from students where is_delete=0 limit (n-1)*m,m;
    ```
 
-7. connect two tables
+7. connect two tables(inner join, left join, right join)
 
    ```mysql
-   select * from students inner join classes on students.cls_id = classed.id
-   select student.*, classes.name from students inner join classes on students.cls_id = classed.id
+   -- inner join
+   select * from students inner join classes on students.cls_id = classed.id;
+   select student.*, classes.name from students as s inner join classes as c on s.cls_id = c.id;
+   -- left join
+   select * from students as s left join classes as c on s.cls_id = c.id;
+   select * from students as s left join classes as c on s.cls_id = c.id having c.id is null; 
+   -- right join
+   select * from classes as c right join students as s on s.cls_id = c.id;
    ```
-
-   
 
 8. Csdsad
 

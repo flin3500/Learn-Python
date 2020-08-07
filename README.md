@@ -363,7 +363,71 @@ This is the repository contains the code and difficulties I face when I learn py
 
 4. Python add, delete, change in mysql   *(LN_03)*
 
-5. Sql injection: do not combine string, let execute to combine that.
+5. Sql injection: do not combine string, let execute function to combine that.
+
+### 7.6 Mysql master-slave replication
+
+1. backup database on master server
+
+   ```bash
+   mysqldump -uroot -p --all-databases --lock-all-tables > ~/master_db.sql
+   ```
+
+2. Copy master_db.sql to slave server and do the restore command
+
+   ```bash
+   mysql –uroot –p < master_db.sql
+   ```
+
+3. the log_bin on master server must be on and server id should be 1.
+
+    ```bash
+   sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf     #to check the config
+    ```
+
+   <div align=center>
+      <img src="./image/master.png" width="50%" height="50%">
+   </div>
+
+4. server id of slave server must be different with master one
+
+5. restart slave and master
+
+   ```bash
+   sudo service mysql restart
+   ```
+
+6. On master, create a mysql account for slave
+
+   ```sql
+   GRANT REPLICATION SLAVE ON *.* TO 'slave'@'%' identified by 'slave';
+   FLUSH PRIVILEGES;
+   ```
+
+7. Use the command and remember the file and position, will be use in step 8
+
+   ```sql
+   show master status;
+   +---------------+----------+--------------+------------------+-------------------+
+   | File          | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
+   +---------------+----------+--------------+------------------+-------------------+
+   | xxxx          |    0000  |              |                  |                   |
+   +---------------+----------+--------------+------------------+-------------------+
+   ```
+
+8. Test on slave check if it is done
+
+   ```sql
+   change master to master_host='[masterip]', master_user='slave', master_password='slave',master_log_file='xxxx', master_log_pos=0000;
+   ```
+
+   ```sql
+   show slave status;
+   Slave_IO_Running: Yes          # this one shows done
+   Slave_SQL_Running: Yes         # this one shows done
+   ```
+
+   
 
 # 06 Advanced Python
 

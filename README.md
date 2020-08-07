@@ -221,7 +221,81 @@ This is the repository contains the code and difficulties I face when I learn py
 
 ### 7.4 Mysql data search grammer
 
+1. use distinct can find the unique of a data
 
+   ```mysql
+   select distinct gender from students;
+   ```
+
+2.  “where” is condition
+
+   Comparison operator: =, >, >=, <, <=, !=, <>
+
+   Logical operator: and or not
+
+   Fuzzy match: 
+
+   	* like: normal like
+   	* rlike: regex like
+   	* %: unlimited char(0- unilimited)
+   	* _: one char(1)
+
+   Range match: in, between...and..., not between...and...
+
+   Null match: is null, is not null **null is not equal to ""**
+
+   ```mysql
+   select * from students where id=1;
+   -- Comparison operator
+   select * from students where id > 3;
+   -- Logical operator
+   select * from students where id > 3 and gender=0;
+   -- Fuzzy match
+   select * from students where name like 'w%';
+   select * from students where name like 'w_';
+   select * from students where name rlike '^w.*';
+   -- Range match
+   select * from students where id in(1,3,8);
+   select * from students where id between 3 and 8;
+   -- Null match
+   select * from students where height is null;
+   select * from students where height is not null;
+   ```
+
+3. sort
+
+   ```mysql
+   select * from students where is_delete=0 order by name asc;
+   select * from students where gender=1 and is_delete=0 order by name asc, id desc;
+   ```
+
+4. count, max, min, sum, avg, round
+
+   ```mysql
+   select count(*) from students;
+   select max(id) from students where gender=2;
+   select min(id) from students where is_delete=0;
+   select sum(age) from students where gender=1;
+   select avg(id) from students where is_delete=0 and gender=2;
+   select round(sun(age)/count(*),2) from students
+   ```
+
+5. group
+
+   ```mysql
+   select gender from students group by gender;
+   +--------+
+   | gender |
+   +--------+
+   | male   |
+   | female |
+   | secret |
+   +--------+
+   ```
+
+   
+
+6. Hj
 
 # 06 Advanced Python
 

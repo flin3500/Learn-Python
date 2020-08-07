@@ -44,7 +44,7 @@ This is the repository contains the code and difficulties I face when I learn py
 
  In this folder, it talks about mysql.
 
-### 7.1 Mysql grammer
+### 7.1 Mysql database grammer
 
 1. start mysql
 
@@ -77,47 +77,133 @@ This is the repository contains the code and difficulties I face when I learn py
    create database python2 charset=utf8;
    ```
 
-6. show created database
+6. drop database
+
+   ```mysql
+   drop database python2;
+   ```
+
+7. show created database
 
    ```mysql
    show create database python2;
    ```
 
+8. show database in use
+
+   ```mysql
+   select database();
+   ```
+
+9. use database
+
+   ```mysql
+   use python2;
+   ```
+
+### 7.2 Mysql table grammer
+
+1. show all tables of current database
+
+   ```mysql
+   show tables;
+   ```
+
+2. create table
+
+   constraint :auto_increment, not null, primary key, default 
+
+   ```mysql
+   create table xx(id int, name varchar(30));
+   create table zz(
+     id int primary key not null auto_increment,
+     name varchar(30)
+   );
+   ```
+
+3. show table description 
+
+   ```mysql
+   desc xx;
+   ```
+
+4. [demo] create students table(id、name、age、high、gender、cls_id)
+
+   ```mysql
+   create table students(
+           id int unsigned not null auto_increment primary key,
+           name varchar(30),
+           age tinyint unsigned default 0,
+           height decimal(5,2),
+           gender enum("male", "female", "secret") default "secret",
+           cls_id int unsigned
+   );
+   ```
+
+5. [demo] insert into students
+
+   ```mysql
+   insert into students values(0, "will", 18, 188.88, "male", 0);
+   ```
+
+6. [demo] show all in students
+
+   ```mysql
+   select * from students;
+   ```
+
+7. [demo] add colume in students
+
+   ```mysql
+   alter table students add birthday datetime;
+   ```
+
+8. [demo] modify colume type in students
+
+   ```mysql
+   alter table students modify birthday date;
+   ```
+
+9. [demo] change colume name in students
+
+   ```mysql
+   alter table students change birthday birth date default "2000-01-01";
+   ```
+
+10. [demo] drop colume in students
+
+    ```mysql
+    alter table students drop height;
+    ```
+
+11. [demo] drop table
+
+    ```mysql
+    drop table xx;
+    ```
+
+### 7.3 Mysql data grammer (crud)
+
+
+
+
+
+1. d
+2. as
+3. d
+4. as
+5. das
+6. d
 7. as
-
-8. das
-
-9. d
-
-10. as
-
-11. d
-
-12. as
-
-13. das
-
-14. d
-
-15. as
-
-16. d
-
-17. as
-
-18. d
-
-19. as
-
-20. das
-
-21. d
-
-22. sa
-
-23. d
-
-24. a
+8. d
+9. as
+10. d
+11. as
+12. das
+13. d
+14. sa
+15. d
+16. a
 
 # 06 Advanced Python
 

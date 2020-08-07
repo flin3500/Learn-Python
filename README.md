@@ -332,7 +332,14 @@ This is the repository contains the code and difficulties I face when I learn py
    select * from classes as c right join students as s on s.cls_id = c.id;
    ```
 
-8. Csdsad
+8. Normal Form
+
+   1. 1NF
+   2. 2NF: base on 1NF, must have a primary key, others need to depend on primary key, can not depend partial
+   3. 3NF: base on 2NF, can not be indirect depend
+   4. ER model:
+      1. one to many: add a key in the many table
+      2. many to many: add a new table
 
 # 06 Advanced Python
 

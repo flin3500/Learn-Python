@@ -341,7 +341,27 @@ This is the repository contains the code and difficulties I face when I learn py
       1. one to many: add a key in the many table
       2. many to many: add a new table
 
+### 7.5 Use mysql in python
 
+1. install PyMySql
+
+   ```bash
+   python3 -m pip install PyMySql
+   ```
+
+2. Connect to mysql
+
+   1. start
+   2. create a connection
+   3. get cursor
+   4. do the sql
+   5. close cursor
+   6. close connection
+   7. Finish
+
+3. khh
+
+4. 
 
 # 06 Advanced Python
 

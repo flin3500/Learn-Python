@@ -341,6 +341,8 @@ This is the repository contains the code and difficulties I face when I learn py
       1. one to many: add a key in the many table
       2. many to many: add a new table
 
+
+
 # 06 Advanced Python
 
  In this folder, it talks about advanced python.

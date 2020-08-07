@@ -349,7 +349,7 @@ This is the repository contains the code and difficulties I face when I learn py
    python3 -m pip install PyMySql
    ```
 
-2. Connect to mysql
+2. Connect to mysql   *(LN_01)*
 
    1. start
    2. create a connection
@@ -359,9 +359,11 @@ This is the repository contains the code and difficulties I face when I learn py
    6. close connection
    7. Finish
 
-3. khh
+3. Python search in mysql   *(LN_02)*
 
-4. 
+4. Python add, delete, change in mysql   *(LN_03)*
+
+5. Sql injection: do not combine string, let execute to combine that.
 
 # 06 Advanced Python
 

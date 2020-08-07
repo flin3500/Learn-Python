@@ -136,10 +136,10 @@ This is the repository contains the code and difficulties I face when I learn py
    drop table students;
    ```
 
-5. [demo] show all in students
+5. [demo] show create table comment
 
    ```mysql
-   select * from students;
+   show create table students;
    ```
 
 6. [demo] add colume in students
@@ -168,86 +168,58 @@ This is the repository contains the code and difficulties I face when I learn py
 
 ### 7.3 Mysql data grammer (crud)
 
-1. [demo] insert into students
+1. [demo] insert into students (all)
 
    ```mysql
-   insert into students values(0, "will", 18, 188.88, "male", 0);
+   insert into students values(0, "will", 20, "male", 1, "1990-01-01");
+   insert into students values(null, "will", 20, "male", 1, "1990-01-01");
+   insert into students values(default, "will", 20, "male", 1, "1990-01-01");
+   --enum
+   insert into students values(default, "will", 20, 1, 1, "1990-01-01");
    ```
 
-2. create table
-
-   constraint :auto_increment, not null, primary key, default 
+2. [demo] insert into students (partial)
 
    ```mysql
-   create table xx(id int, name varchar(30));
-   create table zz(
-     id int primary key not null auto_increment,
-     name varchar(30)
-   );
+   insert into students (name, gender) values ("will", 1);
    ```
 
-3. show table description 
+3. [demo] insert into students (multi-line)
 
    ```mysql
-   desc xx;
+   insert into students (name, gender) values ("will", 1),("jasmine", 2);
+   insert into students values(default, "will", 20, 1, 1, "1990-01-01"), (default, "jasmine", 20, 2, 1, "1990-01-01");
    ```
 
-4. [demo] create students table(id、name、age、high、gender、cls_id)
+4. [demo] change in students id = 3
 
    ```mysql
-   create table students(
-           id int unsigned not null auto_increment primary key,
-           name varchar(30),
-           age tinyint unsigned default 0,
-           height decimal(5,2),
-           gender enum("male", "female", "secret") default "secret",
-           cls_id int unsigned
-   );
+   update students set gender=1 where id=3;
+   update students set age=22, gender=1 where id=3;
    ```
 
-5. [demo] insert into students
-
-   ```mysql
-   insert into students values(0, "will", 18, 188.88, "male", 0);
-   ```
-
-6. [demo] show all in students
+5. [demo] search in students
 
    ```mysql
    select * from students;
+   select * from students where name="will";
+   select * from students where id>3;
+   select name,gender from students;
+   select name as n,gender as g from students;
+   select id, gender, name from students;
    ```
 
-7. [demo] add colume in students
+6. [demo] delete in students
 
    ```mysql
-   alter table students add birthday datetime;
+   delete from students;  --delete all
+   delete from students where name="will";
+   
+   alter table students add is_delete bit default 0; -- do not real change, 0 for not delete, 1 for delete 
+   update students set is_delete=1 where id=3;
    ```
 
-8. [demo] modify colume type in students
-
-   ```mysql
-   alter table students modify birthday date;
-   ```
-
-9. [demo] change colume name in students
-
-   ```mysql
-   alter table students change birthday birth date default "2000-01-01";
-   ```
-
-10. [demo] drop colume in students
-
-    ```mysql
-    alter table students drop height;
-    ```
-
-11. [demo] drop table
-
-    ```mysql
-    drop table xx;
-    ```
-
-
+### 7.4 Mysql data search grammer
 
 
 

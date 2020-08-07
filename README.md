@@ -109,6 +109,71 @@ This is the repository contains the code and difficulties I face when I learn py
    show tables;
    ```
 
+2. [demo] create students table(id、name、age、high、gender、cls_id)
+
+   constraint :auto_increment, not null, primary key, default 
+
+   ```mysql
+   create table students(
+           id int unsigned not null auto_increment primary key,
+           name varchar(30),
+           age tinyint unsigned default 0,
+           height decimal(5,2),
+           gender enum("male", "female", "secret") default "secret",
+           cls_id int unsigned
+   );
+   ```
+
+3. show table description 
+
+   ```mysql
+   desc students;
+   ```
+
+4. [demo] drop table
+
+   ```mysql
+   drop table students;
+   ```
+
+5. [demo] show all in students
+
+   ```mysql
+   select * from students;
+   ```
+
+6. [demo] add colume in students
+
+   ```mysql
+   alter table students add birthday datetime;
+   ```
+
+7. [demo] modify colume type in students
+
+   ```mysql
+   alter table students modify birthday date;
+   ```
+
+8. [demo] change colume name in students
+
+   ```mysql
+   alter table students change birthday birth date default "2000-01-01";
+   ```
+
+9. [demo] drop colume in students
+
+   ```mysql
+   alter table students drop height;
+   ```
+
+### 7.3 Mysql data grammer (crud)
+
+1. [demo] insert into students
+
+   ```mysql
+   insert into students values(0, "will", 18, 188.88, "male", 0);
+   ```
+
 2. create table
 
    constraint :auto_increment, not null, primary key, default 
@@ -182,28 +247,9 @@ This is the repository contains the code and difficulties I face when I learn py
     drop table xx;
     ```
 
-### 7.3 Mysql data grammer (crud)
 
 
 
-
-
-1. d
-2. as
-3. d
-4. as
-5. das
-6. d
-7. as
-8. d
-9. as
-10. d
-11. as
-12. das
-13. d
-14. sa
-15. d
-16. a
 
 # 06 Advanced Python
 

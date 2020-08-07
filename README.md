@@ -284,6 +284,7 @@ This is the repository contains the code and difficulties I face when I learn py
 
    ```mysql
    select gender from students group by gender;
+   
    +--------+
    | gender |
    +--------+
@@ -291,11 +292,43 @@ This is the repository contains the code and difficulties I face when I learn py
    | female |
    | secret |
    +--------+
+   
+   select gender,group_concat(name) from students group by gender;
+   
+   +--------+-----------------------------------------------------------+
+   | gender | group_concat(name)                                        |
+   +--------+-----------------------------------------------------------+
+   | male   | will, william                                						 |
+   | female | jasmine														                       |
+   | secret | anonimous                                                 |
+   +--------+-----------------------------------------------------------+
+   
+   select gender,count(*) from students group by gender having count(*)>1;
+   +--------+----------+
+   | gender | count(*) |
+   +--------+----------+
+   | male   |        2 |
+   +--------+----------+
+   ```
+
+6. limit
+
+   ```mysql
+   select * from students limit 5;
+   select * from students limit 6,2;
+   select * from students where is_delete=0 limit (n-1)*m,m
+   ```
+
+7. connect two tables
+
+   ```mysql
+   select * from students inner join classes on students.cls_id = classed.id
+   select student.*, classes.name from students inner join classes on students.cls_id = classed.id
    ```
 
    
 
-6. Hj
+8. Csdsad
 
 # 06 Advanced Python
 

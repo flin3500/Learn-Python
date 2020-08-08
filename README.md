@@ -48,11 +48,11 @@ This is the repository contains the code and difficulties I face when I learn py
 
 1. Demo *(LN_01)*
 
-### 8.2 Divide static and active data into two server
+### 8.2 Divide static and dynamic data into two server
 
-1. Divide static and active data
-   1. static for getting request, and if found the request is active, pass it to active file  *(LN_01)*
-   2. deal with the active request and return to static one  *(LN_02)*
+1. Divide static and dynamic data
+   1. Server for getting request, and if found the request is for dynamic data, pass it to dynamic server  *(LN_01)*
+   2. dynamic server deal with the dynamic request and return to server  *(LN_02)*
 
 ### 8.3 WSGI
 

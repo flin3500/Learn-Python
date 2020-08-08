@@ -68,11 +68,13 @@ This is the repository contains the code and difficulties I face when I learn py
       <img src="./image/wsgi_framework.png" width="50%" height="50%">
    </div>
 
-2. 
+### 8.4 Process
 
-3. 
-
-4. 
+1. Browser  send request - > Server
+2. Server check if request is dynamic or static
+   1. Static: get the data from harddisk
+   2. Dynamic: use WSGL to tell framework, framework return the data to server
+3. Sever combine header and body into response and send the response back to Browser
 
 # 07 Mysql
 

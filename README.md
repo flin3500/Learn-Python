@@ -46,10 +46,33 @@ This is the repository contains the code and difficulties I face when I learn py
 
 ### 8.1 Change webserver to OOP
 
+1. Demo *(LN_01)*
+
 ### 8.2 Divide static and active data into two server
 
 1. Divide static and active data
+   1. static for getting request, and if found the request is active, pass it to active file  *(LN_01)*
+   2. deal with the active request and return to static one  *(LN_02)*
+
+### 8.3 WSGI
+
+1. **What is WSGI?** 
+
+   It is a simple calling convention for web servers to forward requests to web applications or frameworks written in the Python programming language
+
+   <div align=center>
+      <img src="./image/wsgi.png" width="50%" height="50%">
+   </div>Process:
+
+   <div align=center>
+      <img src="./image/wsgi_framework.png" width="50%" height="50%">
+   </div>
+
 2. 
+
+3. 
+
+4. 
 
 # 07 Mysql
 

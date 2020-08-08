@@ -2,7 +2,7 @@ import socket
 import re
 import multiprocessing
 import time
-import LN_02_mini_frame
+import LN_02_WSGI_frame
 
 
 class WSGIServer(object):
@@ -61,9 +61,18 @@ class WSGIServer(object):
 			"""
 			active request
 			"""
-			header = "HTTP/1.1 200 OK\r\n"
+
+
+			env = dict()
+			body = LN_02_WSGI_frame.application(env, self.set_response_header)
+						
+			header = "HTTP/1.1 %s\r\n" % self.status
+
+			for temp in self.headers:
+				header += "%s:%s\r\n" % (temp[0],temp[1])
+
 			header += "\r\n"
-			body = LN_02_mini_frame.login()
+
 			response = header+body
 			serve_socket.send(response.encode("utf-8"))
 
@@ -71,8 +80,9 @@ class WSGIServer(object):
 		# 6. close the serve socket
 		serve_socket.close()
 
-
-
+	def set_response_header(self, status, headers):
+		self.status = status
+		self.headers = headers
 
 
 	def run_forever(self):

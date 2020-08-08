@@ -2,7 +2,7 @@ import socket
 import re
 import multiprocessing
 import time
-import LN_02_mini_frame_dynamic_by_WSGI
+import dynamic.LN_02_mini_frame_dynamic_by_WSGI
 
 
 class WSGIServer(object):
@@ -35,7 +35,7 @@ class WSGIServer(object):
 		# 2. find the file
 		if not file_name.endswith(".py"):
 			try:
-				f = open("../../05_Webserver/02_HTTP_and_Webserver/html" + file_name,"rb")
+				f = open("./static" + file_name,"rb")
 			except:
 				# 3. header
 				response = "HTTP/1.1 404 NOT FOUND\r\n"
@@ -65,7 +65,7 @@ class WSGIServer(object):
 
 			env = dict()
 			env['PATH_INFO'] = file_name
-			body = LN_02_mini_frame_dynamic_by_WSGI.application(env, self.set_response_header)
+			body = dynamic.LN_02_mini_frame_dynamic_by_WSGI.application(env, self.set_response_header)
 						
 			header = "HTTP/1.1 %s\r\n" % self.status
 

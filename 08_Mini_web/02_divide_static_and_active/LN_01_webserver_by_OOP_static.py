@@ -2,7 +2,7 @@ import socket
 import re
 import multiprocessing
 import time
-import LN_02_mini_frame
+import LN_02_mini_frame_dynamic
 
 
 class WSGIServer(object):
@@ -63,7 +63,7 @@ class WSGIServer(object):
 			"""
 			header = "HTTP/1.1 200 OK\r\n"
 			header += "\r\n"
-			body = LN_02_mini_frame.application(file_name)
+			body = LN_02_mini_frame_dynamic.application(file_name)
 			response = header+body
 			serve_socket.send(response.encode("utf-8"))
 

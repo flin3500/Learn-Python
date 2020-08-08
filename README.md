@@ -40,6 +40,12 @@ Table of Contents
 
 This is the repository contains the code and difficulties I face when I learn python.
 
+# 08 Mini-web
+
+ In this folder, it talks about mini-web.
+
+
+
 # 07 Mysql
 
  In this folder, it talks about mysql.

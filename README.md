@@ -44,7 +44,12 @@ This is the repository contains the code and difficulties I face when I learn py
 
  In this folder, it talks about mini-web.
 
-1. change multiprocesses webserver to OOP
+### 8.1 Change webserver to OOP
+
+### 8.2 Divide static and active data into two server
+
+1. Divide static and active data
+2. 
 
 # 07 Mysql
 

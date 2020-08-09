@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Account - Stock system V5.87</title>
+    <title>Home - Stock system V5.87</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
@@ -20,10 +20,9 @@
     </div>
     <div class="collapse navbar-collapse" id="mymenu">
         <ul class="nav navbar-nav">
-            <li ><a href="/index.py">Stock information</a></li>
-            <li class="active"><a href="/center.py">Account</a></li>
+            <li class="active"><a href="/index.html">Stock information</a></li>
+            <li><a href="/center.html">Account</a></li>
         </ul>
-
     </div>
     </div>
 </div>
@@ -33,17 +32,17 @@
 
       <table class="table table-hover">
         <tr>
+            <th>Serial number</th>
             <th>Stock code</th>
             <th>Ticker symbol</th>
             <th>Change</th>
             <th>Turnover Rate</th>
             <th>Stock price($)</th>
             <th>Previous highs</th>
-            <th style="color:red">Alias</th>
-            <th>Modify alias</th>
-            <th>Del</th>
-        </tr>
-        {%content%}                     
+            <th>Date of previous highs</th>
+            <th>Add</th>
+        </tr> 
+        {%content%}           
       </table>
     </div>
   </div>

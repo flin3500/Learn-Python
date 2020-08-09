@@ -106,7 +106,7 @@ This is the repository contains the code and difficulties I face when I learn py
 
    A **decorator** in **Python** is any callable **Python** object that is used to modify a function or a class. A reference to a function "func" or a class "C" is passed to a **decorator** and the **decorator** returns a modified function or class.
 
-2. demo
+2. demo  (no arguments and no return)
 
    ```python
    def set_func(func):
@@ -123,7 +123,117 @@ This is the repository contains the code and difficulties I face when I learn py
    test1()
    ```
 
-3. 
+3. demo1 (have argument and no return)
+
+   ```python
+   def set_func(func):
+     def call_func(num):
+       print("-----1-----")
+       func(num)
+     return call_func
+   
+   @set_func
+   def test1(num):   
+     print("-----test1-----")
+     
+   test1(100)
+   ```
+
+4. Demo2 (have arguments and no return)
+
+   ```python
+   def set_func(func):
+     def call_func(*args, **kwagrs):
+       print("-----1-----")
+       func(*args, **kwargs)
+     return call_func
+   
+   @set_func
+   def test1(num, *args, **kwargs):   
+     print("-----test1-----%d" % num)
+     print("-----test1-----" args)
+     print("-----test1-----" kwargs)
+     
+   test1(100)
+   test1(100, 200)
+   test1(100, 200, 300, mm=100)
+   ```
+
+5. Demo3 (have arguments and have return)
+
+   ```python
+   def set_func(func):
+     def call_func(*args, **kwagrs):
+       print("-----1-----")
+       return func(*args, **kwargs)
+     return call_func
+   
+   @set_func
+   def test1(num, *args, **kwargs):   
+     print("-----test1-----%d" % num)
+     print("-----test1-----" args)
+     print("-----test1-----" kwargs)
+     return "ok"
+     
+   ret = test1(100)
+   print(ret)
+   test1(100, 200)
+   test1(100, 200, 300, mm=100)
+   ```
+
+6. Demo3 (have several decorator)
+
+   ```python
+   def set_add(func):
+     print("start1")
+     def call_func():
+       print("-----1-----")
+       func()
+     return call_func
+   
+   def set_func(func):
+     print("start2")
+     def call_func():
+       print("-----2-----")
+       func()
+     return call_func
+   
+   @set_add
+   @set_func
+   def test1():   
+     print("-----test1-----")
+     
+   test1()
+   # -----1-----
+   # -----2-----
+   # -----test1-----
+   ```
+
+7. Demo3 (have several decorator and have return)
+
+   ```python
+   def set_add(func):
+     print("start1")
+     def call_func():
+       return "<h1>" + func() + "</h1>"
+     return call_func
+   
+   def set_func(func):
+     print("start2")
+     def call_func():
+       return "<td>" + func() + "</td>"
+     return call_func
+   
+   @set_add
+   @set_func
+   def test1():   
+     return "haha"
+     
+   test1()
+   # <h1><td>haha</td></h1>
+   ```
+
+8. Dsadasdsa
 
 # 07 Mysql
 

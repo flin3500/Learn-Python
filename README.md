@@ -76,6 +76,55 @@ This is the repository contains the code and difficulties I face when I learn py
    2. Dynamic: use WSGL to tell framework, framework return the data to server
 3. Sever combine header and body into response and send the response back to Browser
 
+### 8.5 Closure
+
+1. What is closure?
+
+   A **closure** is a nested function which has access to a free variable from an enclosing function that has finished its execution. Three characteristics of a **Python closure** are: it is a nested function. it has access to a free variable in outer scope. it is returned from the enclosing function.
+
+2. demo
+
+   ```python
+   def line(k, b):
+     def create_y(x):
+       print(k*x+b)
+     return create_y
+   
+   line_1 = line(1,2)
+   line_1(0)
+   line_1(1)
+   line_1(2)
+   ```
+
+   <div align=center>
+      <img src="./image/closure1.png" width="50%" height="50%">
+   </div>
+
+### 8.6 Decorator
+
+1. What is decorator?
+
+   A **decorator** in **Python** is any callable **Python** object that is used to modify a function or a class. A reference to a function "func" or a class "C" is passed to a **decorator** and the **decorator** returns a modified function or class.
+
+2. demo
+
+   ```python
+   def set_func(func):
+     def call_func():
+       print("-----1-----")
+       func()
+     return call_func
+   
+   @set_func  # this is equal to test1 = set_func(test1)
+   def test1():   
+     print("-----test1-----")
+     
+   test1 = set_func(test1)
+   test1()
+   ```
+
+3. 
+
 # 07 Mysql
 
  In this folder, it talks about mysql.

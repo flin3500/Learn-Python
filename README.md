@@ -181,7 +181,7 @@ This is the repository contains the code and difficulties I face when I learn py
    test1(100, 200, 300, mm=100)
    ```
 
-6. Demo3 (have several decorator)
+6. Demo4 (have several decorator)
 
    ```python
    def set_add(func):
@@ -209,7 +209,7 @@ This is the repository contains the code and difficulties I face when I learn py
    # -----test1-----
    ```
 
-7. Demo3 (have several decorator and have return)
+7. Demo5 (have several decorator and have return)
 
    ```python
    def set_add(func):
@@ -233,7 +233,38 @@ This is the repository contains the code and difficulties I face when I learn py
    # <h1><td>haha</td></h1>
    ```
 
-8. Dsadasdsa
+8. Demo6 (decorator with parameter)
+
+   ```python
+   def set_level(level_num):
+   	def set_func(func):
+   		def call_func(*args, **kwargs):
+   			if level_num == 1:
+   				print("----level 1----")
+   			elif level_num == 2:
+   				print("----level 2----")
+   			return func()
+   		return call_func
+   	return set_func
+   
+   
+   @set_level(1)
+   def test1():
+   	print("-----test1---")
+   	return "ok"
+   
+   @set_level(2)
+   def test2():
+   	print("-----test2---")
+   	return "ok"
+   
+   test1()
+   test2()
+   ```
+
+   
+
+9. Dsdsadsa
 
 # 07 Mysql
 

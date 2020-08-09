@@ -262,9 +262,7 @@ This is the repository contains the code and difficulties I face when I learn py
    test2()
    ```
 
-   
 
-9. Dsdsadsa
 
 # 07 Mysql
 

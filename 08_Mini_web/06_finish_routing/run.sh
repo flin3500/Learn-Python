@@ -1,0 +1,1 @@
+python3 LN_01_webserver_by_OOP_static.py 9301 LN_02_mini_frame_dynamic_by_WSGI:application

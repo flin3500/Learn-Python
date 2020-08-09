@@ -35,7 +35,7 @@ class WSGIServer(object):
 				file_name = "/index.html"
 
 		# 2. find the file
-		if not file_name.endswith(".py"):
+		if not file_name.endswith(".html"):
 			try:
 				f = open(self.static_path + file_name,"rb")
 			except:

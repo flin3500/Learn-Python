@@ -423,6 +423,16 @@ Fontend --(HTTP)--> Server --(WSGI)--> framework --(mysql)--> database
    print(f.BAR)
    ```
 
+### 8.9 ORM (Object-relational mapping )
+
+1. What is ORM?
+
+   Object-relational mapping in computer science is a programming technique for converting data between incompatible type systems using object-oriented programming languages. This creates, in effect, a **virtual object database** that can be used from within the programming language.
+
+2. Demo
+
+
+
 # 07 Mysql
 
  In this folder, it talks about mysql.

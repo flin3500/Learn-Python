@@ -264,6 +264,89 @@ Fontend --(HTTP)--> Server --(WSGI)--> framework --(mysql)--> database
    test2()
    ```
 
+### 8.7 Log
+
+1. What is log?
+
+   A **log** file is a file that records either events that occur in an operating system or other software runs, or messages between different users of a communication software. **Logging** is the act of keeping a **log**. In the simplest case, messages are written to a single **log** file.
+
+2. Log levels(python for critical and java for fatal)
+
+   <div align=center>
+      <img src="./image/log.png" width="50%" height="50%">
+   </div>
+
+3. Demo1(print in terminal)
+
+   ```python
+   import logging  
+   
+   logging.basicConfig(level=logging.WARNING)  #WARNNING IS DEFAULT, CAN CHANGE
+   logging.basicConfig(level=logging.WARNING,format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s') 
+   
+   logging.debug('This is loggging debug message') 
+   logging.info('This is loggging info message')
+   logging.warning('This is loggging a warning message')  
+   logging.error('This is an loggging error message')  
+   logging.critical('This is loggging critical message')
+   ```
+
+4. Demo2(output to a file)
+
+   ```python
+   import logging  
+   
+   logging.basicConfig(level=logging.WARNING,  
+                       filename='./log.txt',  
+                       filemode='w',  
+                       format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')  
+   # use logging  
+   logging.info('This is loggging info message')  
+   logging.debug('This is loggging debug message')  
+   logging.warning('This is loggging a warning message')  
+   logging.error('This is an loggging error message')  
+   logging.critical('This is loggging critical message')
+   ```
+
+5. Demo3(print in terminal and output to a file)
+
+   ```python
+   import logging  
+   
+   # 1. create a logger
+   logger = logging.getLogger()  
+   logger.setLevel(logging.INFO)    # for all
+   
+   # 2. create a logger for file
+   logfile = './log.txt'  
+   fh = logging.FileHandler(logfile, mode='a')  
+   fh.setLevel(logging.DEBUG)  # for file
+   
+   # 3. create a logger for terminal
+   ch = logging.StreamHandler()  
+   ch.setLevel(logging.WARNING)  # for terminal
+   
+   # 4. set the format  
+   formatter = logging.Formatter("%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s")  
+   fh.setFormatter(formatter)  
+   ch.setFormatter(formatter)  
+   
+   # 5. add for file and for terminal in the overall logger
+   logger.addHandler(fh)  
+   logger.addHandler(ch)  
+   
+   # log  
+   logger.debug('This is logger debug message')  
+   logger.info('This is logger info message')  
+   logger.warning('This is logger warning message')  
+   logger.error('This is logger error message')  
+   logger.critical('This is logger critical message')
+   ```
+
+   
+
+6. dsa
+
 
 
 # 07 Mysql

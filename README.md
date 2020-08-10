@@ -343,9 +343,85 @@ Fontend --(HTTP)--> Server --(WSGI)--> framework --(mysql)--> database
    logger.critical('This is logger critical message')
    ```
 
+### 8.8 Metaclass
 
+1. What is metaclass?
 
+   A **metaclass** in **Python** is a class of a class that defines how a class behaves. A class is itself an instance of a **metaclass**. A class in **Python** defines how the instance of the class will behave.
 
+2. Globals() in ipython
+
+   ```python
+   {'__name__': '__main__',
+    '__doc__': 'Automatically created module for IPython interactive environment',
+    '__package__': None,
+    '__loader__': None,
+    '__spec__': None,
+    '__builtin__': <module 'builtins' (built-in)>,
+    '__builtins__': <module 'builtins' (built-in)>,
+    '_ih': ['', 'globals()'],
+    '_oh': {},
+    '_dh': ['/Users/lin/Downloads/github/python_learning'],
+    'In': ['', 'globals()'],
+    'Out': {},
+    'get_ipython': <bound method InteractiveShell.get_ipython of <IPython.terminal.interactiveshell.TerminalInteractiveShell object at 0x111b33f10>>,
+    'exit': <IPython.core.autocall.ExitAutocall at 0x111b335b0>,
+    'quit': <IPython.core.autocall.ExitAutocall at 0x111b335b0>,
+    '_': '',
+    '__': '',
+    '___': '',
+    '_i': '',
+    '_ii': '',
+    '_iii': '',
+    '_i1': 'globals()'}
+   ```
+
+3. Type() can make a class which is a metaclass  **God in python**
+
+   ```python
+   class animal(object, metaclass):  # equal to animal = type('animal', (object,), {"age":2, "height":1})
+      age = 2
+   	 height = 1
+       
+   MyDog = type('MyDog', (), {"age":2, "height":1})
+   MyCat = type('MyDog', (animal,), {})    #inherit
+   
+   def eat(self):
+     print("eat")
+   MyPig = type('MyPig', (), {"eat": eat})  # instance method
+   
+   @classmethod
+   def sleep(cls):
+     print("class method")
+   MyPig = type('MyPig', (), {"eat": eat, "sleep": sleep})   # class method
+   
+   @staticmethod
+   def drink(cls):
+     pass
+   MyPig = type('MyPig', (), {"eat": eat, "sleep": sleep, "drink": drink})   # static method
+   ```
+
+4. specify the metaclass(upper_attr is the metaclass)
+
+   ```python
+   def upper_attr(class_name, class_parents, class_attr):
+   
+       new_attr = {}
+       for name,value in class_attr.items():
+           if not name.startswith("__"):
+               new_attr[name.upper()] = value
+   
+       return type(class_name, class_parents, new_attr)
+   
+   class Foo(object, metaclass=upper_attr):
+       bar = 'bip'
+   
+   print(hasattr(Foo, 'bar'))
+   print(hasattr(Foo, 'BAR'))
+   
+   f = Foo()
+   print(f.BAR)
+   ```
 
 # 07 Mysql
 

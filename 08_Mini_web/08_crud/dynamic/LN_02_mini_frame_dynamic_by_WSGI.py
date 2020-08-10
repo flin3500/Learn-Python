@@ -1,5 +1,6 @@
 import re
 import pymysql
+import urllib.parse
 
 URL_FUN_DICT = dict()
 
@@ -162,6 +163,7 @@ def show_update(reg):
 def update(reg):
     stock_code = reg.group(1)
     comment = reg.group(2)
+    comment = urllib.parse.unquote(comment)
 
 
     conn = pymysql.connect(host='localhost',port=3306,user='root',password='',database='stock_db',charset='utf8')

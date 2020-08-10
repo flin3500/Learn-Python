@@ -42,7 +42,9 @@ This is the repository contains the code and difficulties I face when I learn py
 
 # 08 Mini-web
 
- In this folder, it talks about mini-web.
+In this folder, it talks about mini-web.
+
+Fontend --(HTTP)--> Server --(WSGI)--> framework --(mysql)--> database
 
 ### 8.1 Change webserver to OOP
 

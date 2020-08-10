@@ -1,6 +1,7 @@
 import re
 import pymysql
 import urllib.parse
+import logging
 
 URL_FUN_DICT = dict()
 
@@ -182,12 +183,20 @@ def update(reg):
 def application(environ, start_response):
     start_response('200 OK', [('Content-Type', 'text/html;charset=utf-8')])
     file_name = environ['PATH_INFO']
+
+    logging.basicConfig(level=logging.INFO,  
+                    filename='./log.txt',  
+                    filemode='w',  
+                    format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')  
+
+    logging.info("The url is %s" % file_name)
     try:
         for url, func in URL_FUN_DICT.items():
             reg = re.match(url, file_name)
             if reg:
                 return func(reg)
         else:
+            logging.warning("no this url_fun")
             return "no func in the url %s" % file_name
     except Exception as e:
         return "Have error %s" % str(e)

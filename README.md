@@ -343,9 +343,7 @@ Fontend --(HTTP)--> Server --(WSGI)--> framework --(mysql)--> database
    logger.critical('This is logger critical message')
    ```
 
-   
 
-6. dsa
 
 
 

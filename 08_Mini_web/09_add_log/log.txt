@@ -1,0 +1,2 @@
+2020-08-10 20:14:56,467 - LN_02_mini_frame_dynamic_by_WSGI.py[line:192] - INFO: The url is /indeuiuigiugkgx.html
+2020-08-10 20:14:56,467 - LN_02_mini_frame_dynamic_by_WSGI.py[line:199] - WARNING: no this url_fun

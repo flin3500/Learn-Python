@@ -6,6 +6,7 @@ conn = redis.Redis(
 )
 
 try:
+	conn.flushall()
 	conn.set("country", "Britain")
 	conn.delete("country")
 	conn.mset({"country":"German", "city":"Berlin"})

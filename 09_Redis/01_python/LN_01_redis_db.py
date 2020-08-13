@@ -1,9 +1,12 @@
 import redis
 
-pool = redis.ConnectionPool(
-	host = "locahost",
-	port = 6379,
-	password = "redislin",
-	db = 0,
-	max_connections=20
-)
+try:
+	pool = redis.ConnectionPool(
+		host = "127.0.0.1",
+		port = 6379,
+		password = "redislin",
+		db = 0,
+		max_connections=20
+	)
+except Exception as e:
+	print(e)

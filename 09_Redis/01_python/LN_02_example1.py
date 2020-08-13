@@ -6,6 +6,7 @@ conn = redis.Redis(
 	connection_pool=pool
 )
 
+conn.flushall()
 conn.set("country", "Britain")
 conn.set("city", "London")
 city = conn.get("city").decode("utf-8")

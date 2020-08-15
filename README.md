@@ -824,7 +824,7 @@ u.save()
 
     ```bash
    sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf     #to check the config
-    ```
+   ```
 
    <div align=center>
       <img src="./image/master.png" width="50%" height="50%">

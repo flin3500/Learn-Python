@@ -183,6 +183,7 @@ Fontend --(HTTP)--> Server --(WSGI)--> framework --(mysql)--> database
    test1(100, 200, 300, mm=100)
    ```
 
+
 6. Demo4 (have several decorator)
 
    ```python
